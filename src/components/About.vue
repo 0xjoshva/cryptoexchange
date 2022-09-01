@@ -110,11 +110,11 @@ export default {};
   padding-top: 4rem;
 }
 .cards {
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  filter: opacity(0.5);
   width: 300px;
   height: 270px;
+  box-shadow: 20px 17px 0px 0px white;
 }
 .text {
   width: 100%;
