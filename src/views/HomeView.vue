@@ -1,7 +1,7 @@
 <template>
 <Landing/>
 <About/>
-<Branding/>
+
 </template>
 <script>
 import Landing from "@/components/Landing.vue";

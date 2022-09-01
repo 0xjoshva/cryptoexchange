@@ -51,6 +51,7 @@ ul {
 }
 body {
   background: #192185;
+  width: 100%;
 }
 ol,
 ul {
@@ -90,7 +91,5 @@ img {
   background-color: white;
 }
 
-nav a :active {
-  color: var(--lgreen);
-}
+
 </style>

@@ -1,8 +1,8 @@
 <template>
   <nav>
     <router-link to="/" class="home"
-      ><img src="../assets/logo.svg" alt=""
-    /></router-link>
+      ><img src="../assets/logo.png" alt="" /> tide | exchange</router-link
+    >
     <div class="nav-links">
       <router-link to="/market-overview" class="nav-link">Markets</router-link>
       <router-link to="/blog" class="nav-link">Blog</router-link>
@@ -23,6 +23,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 100;
 }
 #login {
   border: none;
@@ -32,7 +36,7 @@ nav {
   background: transparent;
   padding: 0.4rem 1.2rem;
   border: 2px solid var(--highlight);
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Satoshi-Variable";
   color: white;
   border-radius: 26px;
@@ -40,7 +44,7 @@ nav {
 }
 
 .nav-link {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Satoshi-Variable";
   color: white;
   text-decoration: none;
@@ -53,5 +57,16 @@ nav {
 }
 .home {
   padding-left: 10rem;
+}
+img {
+  width: 60px;
+  height: auto;
+}
+.home {
+  text-decoration: none;
+  color: white;
+  font-family: "Satoshi-Variable";
+  font-size: 22px;
+  font-weight: bold;
 }
 </style>

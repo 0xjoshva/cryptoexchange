@@ -5,7 +5,7 @@
         Invest in cryptocurrency, <br />
         you wont regret it
       </h1>
-      <p>
+      <p id="subheading">
         Buying cryptocurrency has never been easier. <br />
         Its as simple as point and click. <br />
       </p>
@@ -55,7 +55,7 @@ export default {};
   font-size: 16px;
   font-family: "Satoshi-Variable";
   font-weight: 600;
-  color: #979797;
+  color: #c5c5c5;
   padding-top: 1rem;
 }
 #hero {
@@ -84,6 +84,7 @@ export default {};
 
 .users {
   display: flex;
+  width: fit-content;
 }
 .user-item {
   background: white;
@@ -99,12 +100,18 @@ export default {};
   font-family: "Satoshi-Variable";
   color: var(--bgcolor);
   background-color: #ffffff;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 .users:hover > .user-item {
-  margin-right: -.2rem;
+  margin-right: -0.6rem;
 }
 #highlight {
   color: rgba(255, 255, 255, 0.918);
+  text-decoration: underline;
+}
+#subheading {
+  font-size: 22px;
+  color: white;
+  filter: opacity(0.7);
 }
 </style>

@@ -23,11 +23,133 @@
         ></path>
       </svg>
     </div>
-    <div class="wrapper">
-      <div class="image">
-        <img src="../assets/lock.png" alt="" />
+    <div class="text">
+      <h3>Build your digital asset portfolio with ease</h3>
+      <p>
+        Choose from a growing list of 6 different cryptocurrencies, all at your
+        own time and in the comfort of your own home. Get the best service you
+        could possible imagine only with us, boasting 24/7 realtime support all
+        across the globe
+      </p>
+      <div class="container">
+        <div class="cards"></div>
+        <div class="cards"></div>
+        <div class="cards"></div>
       </div>
-      <div class="bigcontainer">
+    </div>
+  </section>
+</template>
+<script>
+export default {};
+</script>
+<style scoped>
+.custom-shape-divider-top-1662031755 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1662031929 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1662031929 svg {
+  position: relative;
+  display: block;
+  width: calc(118% + 1.3px);
+  height: 140px;
+}
+
+.custom-shape-divider-top-1662031929 .shape-fill {
+  fill: #192185;
+}
+
+.about {
+  background: #3299f6;
+  height: fit-content;
+  width: 100%;
+  padding-bottom: 6rem;
+}
+
+.icons {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.row1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.3rem;
+}
+.row1 > img {
+  width: 50px;
+  height: 50px;
+}
+.row2 {
+  display: flex;
+  column-gap: 1rem;
+  display: none;
+}
+.row2 > img {
+  width: 50px;
+  height: 50px;
+}
+.container {
+  width: 50%;
+  display: flex;
+  column-gap: 3rem;
+  padding-top: 4rem;
+}
+.cards {
+  background: white;
+  border-radius: 10px;
+  filter: opacity(0.5);
+  width: 300px;
+  height: 270px;
+}
+.text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+.text p {
+  color: white;
+  font-family: "Satoshi-Variable";
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  width: 40%;
+  margin: 0 auto;
+}
+h3 {
+  font-family: "Satoshi-Variable";
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 60px;
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+}
+.bigcontainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+</style>
+
+<!-- <div class="bigcontainer">
         <div class="container">
           <div class="icons">
             <div class="row1">
@@ -88,114 +210,4 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-</template>
-<script>
-export default {};
-</script>
-<style scoped>
-.about {
-  background: rgb(5 3 81);
-  height: fit-content;
-  width: 100%;
-
-  padding-bottom: 6rem;
-}
-.card1 {
-  width: 400px;
-  height: 350px;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
-  border-radius: 10px;
-  border: 1px solid #ffffff2e;
-}
-img {
-  width: 1400px;
-  height: auto;
-  display: flex;
-  margin: 0 auto;
-}
-.custom-shape-divider-top-1662031755 {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1662031929 {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1662031929 svg {
-  position: relative;
-  display: block;
-  width: calc(118% + 1.3px);
-  height: 140px;
-}
-
-.custom-shape-divider-top-1662031929 .shape-fill {
-  fill: #192185;
-}
-.wrapper {
-  display: flex;
-}
-.icons {
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-}
-.row1 {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.3rem;
-}
-.row1 > img {
-  width: 50px;
-  height: 50px;
-}
-.row2 {
-  display: flex;
-  column-gap: 1rem;
-  display: none;
-}
-.row2 > img {
-  width: 50px;
-  height: 50px;
-}
-.container {
-  color: white;
-  font-family: "Satoshi-Variable";
-  display: flex;
-  column-gap: 4rem;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-}
-.text {
-  width: 40%;
-}
-.text span {
-  filter: opacity(0.3);
-}
-.text h3 {
-  font-size: 3rem;
-}
-.bigcontainer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 4rem;
- 
-}
-</style>
+      </div> -->
