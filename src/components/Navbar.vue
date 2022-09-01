@@ -6,6 +6,7 @@
     <div class="nav-links">
       <router-link to="/market-overview" class="nav-link">Markets</router-link>
       <router-link to="/blog" class="nav-link">Blog</router-link>
+      <router-link to="/support" class="nav-link">Support</router-link>
       <router-link to="/register" class="nav-link">Sign Up</router-link>
       <button id="login" class="">Login</button>
     </div>
