@@ -27,10 +27,67 @@
       <div class="image">
         <img src="../assets/lock.png" alt="" />
       </div>
-      <div class="container">
-        <div class="card1"></div>
-        <div class="card1"></div>
-        <div class="card1"></div>
+      <div class="bigcontainer">
+        <div class="container">
+          <div class="icons">
+            <div class="row1">
+              <img src="../assets/about/bitcoin_state2.svg" alt="" />
+              <img src="../assets/about/ethereum_state1.svg" alt="" />
+              <img src="../assets/about/solana_state2.svg" alt="" />
+            </div>
+          </div>
+          <div class="text">
+            <h3>Bitcoin <span>BTC</span></h3>
+            <p>
+              Bitcoin is one of the most popular cryptocurrencies in the market.
+              First introduced in 2009 by Satoshi Nakamoto, Bitcoin has held the
+              crypto market’s number one spot according to market
+              capitalization. Bitcoin paved the way for many existing altcoins
+              in the market and marked a pivotal moment for digital payment
+              solutions.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="icons">
+            <div class="row1">
+              <img src="../assets/about/bitcoin_state1.svg" alt="" />
+              <img src="../assets/about/ethereum_state2.svg" alt="" />
+              <img src="../assets/about/solana_state2.svg" alt="" />
+            </div>
+          </div>
+          <div class="text">
+            <h3>Ethereum <span>ETH</span></h3>
+            <p>
+              Bitcoin is one of the most popular cryptocurrencies in the market.
+              First introduced in 2009 by Satoshi Nakamoto, Bitcoin has held the
+              crypto market’s number one spot according to market
+              capitalization. Bitcoin paved the way for many existing altcoins
+              in the market and marked a pivotal moment for digital payment
+              solutions.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="icons">
+            <div class="row1">
+              <img src="../assets/about/bitcoin_state1.svg" alt="" />
+              <img src="../assets/about/ethereum_state1.svg" alt="" />
+              <img src="../assets/about/solana_state1.svg" alt="" />
+            </div>
+          </div>
+          <div class="text">
+            <h3>Solana <span>SOL</span></h3>
+            <p>
+              Bitcoin is one of the most popular cryptocurrencies in the market.
+              First introduced in 2009 by Satoshi Nakamoto, Bitcoin has held the
+              crypto market’s number one spot according to market
+              capitalization. Bitcoin paved the way for many existing altcoins
+              in the market and marked a pivotal moment for digital payment
+              solutions.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -44,15 +101,6 @@ export default {};
   height: fit-content;
   width: 100%;
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
-  justify-content: center;
-  align-self: center;
-  border-radius: 30px;
-  column-gap: 4rem;
-}
 .card1 {
   width: 400px;
   height: 350px;
@@ -64,8 +112,10 @@ export default {};
   border: 1px solid #ffffff2e;
 }
 img {
-  width: 800px;
+  width: 1400px;
   height: auto;
+  display: flex;
+  margin: 0 auto;
 }
 .custom-shape-divider-top-1662031755 {
   position: relative;
@@ -94,5 +144,57 @@ img {
 
 .custom-shape-divider-top-1662031929 .shape-fill {
   fill: #192185;
+}
+.wrapper {
+  display: flex;
+}
+.icons {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.row1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.3rem;
+}
+.row1 > img {
+  width: 50px;
+  height: 50px;
+}
+.row2 {
+  display: flex;
+  column-gap: 1rem;
+  display: none;
+}
+.row2 > img {
+  width: 50px;
+  height: 50px;
+}
+.container {
+  color: white;
+  font-family: "Satoshi-Variable";
+  display: flex;
+  column-gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.text {
+  width: 40%;
+}
+.text span {
+  filter: opacity(0.3);
+}
+.text h3 {
+  font-size: 3rem;
+}
+.bigcontainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 </style>

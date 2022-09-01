@@ -72,15 +72,15 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px var(--bg-color);
-  box-shadow: inset 0 0 6px var(--bg-color);
+  -webkit-box-shadow: inset 0 0 6px transparent;
+  box-shadow: inset 0 0 6px transparent;
   border-radius: 10px;
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar {
   width: 12px;
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {

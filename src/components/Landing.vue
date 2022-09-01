@@ -32,7 +32,7 @@ export default {};
 <style scoped>
 .landing {
   width: 100%;
-  height:92vh;
+  height: 92vh;
   background: var(--bgcolor);
   color: white;
   display: flex;
@@ -99,7 +99,10 @@ export default {};
   font-family: "Satoshi-Variable";
   color: var(--bgcolor);
   background-color: #ffffff;
-
+  transition: all .2s linear;
+}
+.users:hover > .user-item {
+  margin-right: -.2rem;
 }
 #highlight {
   color: rgba(255, 255, 255, 0.918);
