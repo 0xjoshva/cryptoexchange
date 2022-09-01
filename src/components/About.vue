@@ -100,6 +100,8 @@ export default {};
   background: rgb(5 3 81);
   height: fit-content;
   width: 100%;
+
+  padding-bottom: 6rem;
 }
 .card1 {
   width: 400px;
@@ -194,7 +196,6 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 4rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+ 
 }
 </style>
