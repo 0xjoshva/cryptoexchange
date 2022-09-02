@@ -24,6 +24,7 @@
       <router-link to="/register" class="join">Get Started</router-link>
     </div>
     <img src="../assets/bitcoin.png" alt="" id="hero" />
+    
   </section>
 </template>
 <script>

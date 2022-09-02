@@ -76,7 +76,9 @@ export default {};
   background: #3299f6;
   height: fit-content;
   width: 100%;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .icons {
@@ -104,9 +106,9 @@ export default {};
   height: 50px;
 }
 .container {
-  width: 50%;
+  width: fit-content;
   display: flex;
-  column-gap: 3rem;
+  column-gap: 7rem;
   padding-top: 4rem;
 }
 .cards {
