@@ -21,7 +21,7 @@ export default {
   font-style: normal;
 }
 
-*/
+
 /* CSS RESET */
 html {
   box-sizing: border-box;
