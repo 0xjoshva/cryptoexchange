@@ -21,7 +21,7 @@
         <img class="user-item" src="../assets/memoji4.png" alt="" />
         <div class="user-item user-count">+</div>
       </div>
-      <router-link to="/register" class="join">Join</router-link>
+      <router-link to="/register" class="join">Get Started</router-link>
     </div>
     <img src="../assets/bitcoin.png" alt="" id="hero" />
   </section>
@@ -66,20 +66,22 @@ export default {};
 }
 .join {
   width: fit-content;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.2rem;
   border: none;
   background: linear-gradient(
     90deg,
     #6a9dff -21.47%,
     rgba(107, 128, 170, 0) 153.21%
   );
-  border-radius: 21px;
+  border-radius: 29px;
   color: white;
-  padding: 0.6rem 2.4rem;
+  padding: 0.6rem 1.9rem;
   font-family: "Satoshi-Variable";
   font-weight: 600;
   margin-top: 1.5rem;
   text-decoration: none;
+  font-size: 
+  22px;
 }
 
 .users {

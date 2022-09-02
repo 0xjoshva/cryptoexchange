@@ -26,19 +26,26 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
               <button
                 type="button"
-                class="btn-close btn-close-white"
+                class="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
-              <form action="">
-                <input type="email" id="loginEmail" placeholder="Email" />
-                <input type="password" id="loginPass" placeholder="Password" />
-                <button data-bs-dismiss="modal">Login</button>
-              </form>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
             </div>
           </div>
         </div>
@@ -47,9 +54,22 @@
   </nav>
 </template>
 <script>
-export default {};
+export default {
+  mounted() {
+    function activeLinks() {
+      let navLinks = document.querySelector(".nav-link");
+      navLinks.addEventListener("click", changeClass);
+      function changeClass() {
+        navLinks.classList.add("active");
+      }
+    }
+  },
+};
 </script>
 <style scoped>
+.router-link-active {
+  color: red;
+}
 nav {
   height: 100px;
   width: 100%;

@@ -103,7 +103,6 @@ nav {
 
 .router-link-active {
   background: rgba(128, 128, 128, 0.096);
-  filter: brightness(200%);
 
   box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.062);
 }
@@ -126,21 +125,6 @@ form {
   justify-content: center;
   row-gap: 1rem;
 }
-/* button {
-  color: black;
-  background: var(--orange);
-  display: flex;
-  align-items: center;
-  padding: 10px 33px;
-  width: fit-content;
-  border: none;
-  border-radius: 3px;
-}
-button p {
-  font-size: 1rem;
-  padding-right: 1rem;
-  font-weight: 600;
-} */
 
 #loginPass {
   width: 332px;
