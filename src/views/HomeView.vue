@@ -1,9 +1,10 @@
 <template>
-<Landing/>
-<About/>
-<Tutorial/>
-<Analytics/>
-<App/>
+  <Landing />
+  <About />
+  <Tutorial />
+  <Analytics />
+  <App />
+  <Footer />
 </template>
 <script>
 import Landing from "@/components/HomeLanding.vue";
@@ -12,6 +13,7 @@ import Branding from "@/components/HomeBranding.vue";
 import Tutorial from "@/components/HomeTutorial.vue";
 import Analytics from "@/components/HomeAnalytics.vue";
 import App from "@/components/HomeApp.vue";
+import Footer from "@/components/TheFooter.vue";
 
 export default {
   name: "HomeView",
@@ -21,7 +23,8 @@ export default {
     Branding,
     Tutorial,
     Analytics,
-    App
-},
+    App,
+    Footer,
+  },
 };
 </script>
