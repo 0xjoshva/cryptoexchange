@@ -81,8 +81,8 @@ export default {};
   font-weight: 600;
   margin-top: 1.5rem;
   text-decoration: none;
-  font-size: 
-  22px;
+  font-size: 22px;
+  transition: all .2s linear;
 }
 
 .users {

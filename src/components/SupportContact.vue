@@ -1,26 +1,28 @@
 <template>
   <section class="contact">
-    <div>
-      <h1>Support</h1>
-      <p id="subheading">Expect a response withing 3-5 business days</p>
-    </div>
-    <form action="https://formspree.io/f/mvoygdwl" method="POST">
-      <div id="inputgroup">
-        <input type="text" placeholder="John Doe" />
-        <input type="email" placeholder="example@email.com" />
+    <div class="container">
+      <div class="text">
+        <h1>Support</h1>
+        <p id="subheading">Expect a response withing 3-5 business days</p>
       </div>
-      <textarea
-        name=""
-        id=""
-        cols="30"
-        rows="10"
-        placeholder="Message"
-      ></textarea>
-      <button type="submit">
-        <p>Send Message</p>
-        <img src="../assets/arrow-right-circle.svg" alt="" />
-      </button>
-    </form>
+      <form action="https://formspree.io/f/mvoygdwl" method="POST">
+        <div id="inputgroup">
+          <input type="text" placeholder="John Doe" />
+          <input type="email" placeholder="example@email.com" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Message"
+        ></textarea>
+        <button type="submit">
+          <p>Send Message</p>
+          <img src="../assets/arrow-right-circle.svg" alt="" />
+        </button>
+      </form>
+    </div>
   </section>
 </template>
 <script>
@@ -31,10 +33,22 @@ export default {};
   background: var(--bgcolor);
   height: 100vh;
   width: 100%;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Satoshi-Variable";
 }
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.text {
+  width: 100%;
+}
+
 h1 {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Satoshi-Variable";
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
@@ -45,8 +59,9 @@ h1 {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.39);
-  padding-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.699);
+  padding-bottom: 1.5rem;
+  width: 40rem;
 }
 form {
   display: flex;
@@ -71,7 +86,7 @@ button p {
 input {
   width: 340px;
   height: 45px;
-  border: 1px solid #555454;
+  border: 1px solid white;
   background: var(--bgcolor);
   border-radius: 4px;
   font-family: "Segoe UI";
@@ -90,8 +105,9 @@ textarea {
   background: var(--bgcolor);
   border-radius: 4px;
   resize: none;
-  width: 708px;
-  border: 1px solid #555454;
+  width: 44.1rem;
+  height: 25vh;
+  border: 1px solid white;
   font-family: "Segoe UI";
   font-style: normal;
   font-weight: 400;
@@ -108,5 +124,8 @@ textarea:focus {
 #inputgroup {
   display: flex;
   column-gap: 1.5rem;
+}
+::placeholder {
+  color: #eeeeee6b;
 }
 </style>

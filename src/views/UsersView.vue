@@ -2,7 +2,7 @@
   <Users />
 </template>
 <script>
-import Users from "/src/components/Users.vue";
+import Users from "/src/components/DashboardUsers.vue";
 export default {
   components: {
     Users,

@@ -4,7 +4,7 @@
       ><img src="../assets/logo.png" alt="" /> tide | exchange</router-link
     >
     <div class="nav-links">
-      <router-link to="/market-overview" class="nav-link">Markets</router-link>
+      <router-link to="/market-overview" class="nav-link">Market Overview</router-link>
       <router-link to="/blog" class="nav-link">Blog</router-link>
       <router-link to="/support" class="nav-link">Support</router-link>
       <router-link to="/register" class="nav-link">Sign Up</router-link>

@@ -2,12 +2,16 @@
 <Landing/>
 <About/>
 <Tutorial/>
+<Analytics/>
+<App/>
 </template>
 <script>
-import Landing from "@/components/Landing.vue";
-import About from "@/components/About.vue";
-import Branding from "@/components/Branding.vue";
-import Tutorial from "@/components/Tutorial.vue";
+import Landing from "@/components/HomeLanding.vue";
+import About from "@/components/HomeAbout.vue";
+import Branding from "@/components/HomeBranding.vue";
+import Tutorial from "@/components/HomeTutorial.vue";
+import Analytics from "@/components/HomeAnalytics.vue";
+import App from "@/components/HomeApp.vue";
 
 export default {
   name: "HomeView",
@@ -15,7 +19,9 @@ export default {
     Landing,
     About,
     Branding,
-    Tutorial
+    Tutorial,
+    Analytics,
+    App
 },
 };
 </script>

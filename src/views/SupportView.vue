@@ -2,7 +2,7 @@
 <Contact/>
 </template>
 <script>
-import Contact from "../components/Contact.vue"
+import Contact from "../components/SupportContact.vue"
 export default {
     components: {
         Contact

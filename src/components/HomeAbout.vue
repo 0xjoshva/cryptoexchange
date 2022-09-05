@@ -32,9 +32,20 @@
         across the globe
       </p>
       <div class="container">
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
+        <div class="cards">
+          <h1>
+            Debit / Credit cards
+          </h1>
+          <p>buy cryptocurrency easily with Mastercard and Visa</p>
+        </div>
+        <div class="cards">
+         <h1>Support</h1>
+         <p>get 24/7 support with our highly trained agents.</p>
+        </div>
+        <div class="cards">
+          <h1>Cryptocurrency</h1>
+          <p>Choose from 7 different currencies to build your portfolio</p>
+        </div>
       </div>
     </div>
   </section>
@@ -77,8 +88,8 @@ export default {};
   height: fit-content;
   width: 100%;
   padding-bottom: 10rem;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 400px;
+  border-bottom-right-radius: 400px;
 }
 
 .icons {
@@ -116,7 +127,11 @@ export default {};
   border-radius: 10px;
   width: 300px;
   height: 270px;
-  box-shadow: 20px 17px 0px 0px white;
+  transition: 0.4s all ease-in-out;
+}
+.cards:hover {
+  box-shadow: 5px 5px 0px 0px white;
+  transform: translate(-3px, -3px);
 }
 .text {
   width: 100%;
