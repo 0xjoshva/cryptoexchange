@@ -143,7 +143,7 @@ a {
   padding-bottom: 0.4rem;
 }
 .blurb {
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.8rem;
   color: rgba(81, 81, 81, 0.833);
   font-family: "Satoshi-Variable";
   font-weight: 500;
