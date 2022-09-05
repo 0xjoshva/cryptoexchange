@@ -88,8 +88,8 @@ export default {};
   height: fit-content;
   width: 100%;
   padding-bottom: 10rem;
-  border-bottom-left-radius: 400px;
-  border-bottom-right-radius: 400px;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
 }
 
 .icons {

@@ -41,7 +41,7 @@ export default {};
 <style scoped>
 .register {
   background: var(--bgcolor);
-  height: 84vh;
+  height: 100vh;
   width: 100%;
   font-family: "Segoe UI", sans-serif;
   display: flex;
