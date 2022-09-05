@@ -5,7 +5,9 @@
       <p>With our analytics data you can keep track of your funds.</p>
       <p>
         This gives you insight to the amount you have spent and the amount of
-        each crypto you own
+        each crypto you own. <br> <br> To stay ahead of the curve, we continuously work on
+        strengthening tide's functionality and we aim to be a leading platform for
+        digital assets while expanding to our full potential.
       </p>
     </div>
     <img src="../assets/dash.png" alt="" />
@@ -39,14 +41,16 @@ section {
 .text {
   background: white;
   float: left;
-  width: fit-content;
+  width: 50rem;
   height: 30rem;
   padding: 4rem;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: -10px 10px 19px 10px #00000047;
+  padding-left: 11rem;
+  padding-right: 10rem;
 }
-img{
+img {
   width: 50vw;
 }
 </style>

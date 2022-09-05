@@ -35,18 +35,22 @@
         <div class="cards">
           <h1 class="header">Debit / Credit cards</h1>
           <p class="content">
-            buy cryptocurrency easily with Mastercard, Visa, and American
+            Buy cryptocurrency easily with Mastercard, Visa, and American
             Express
           </p>
-          <div class="debitcredit"></div>
-          <img src="../assets/mastercardpng.png" alt="" class="mastercard">
-          <img src="../assets/visa.png" alt="" class="visa">
+          <div class="debitcredit">
+            <img src="../assets/mastercard.svg" alt="" class="mastercard" />
+            <img src="../assets/visa.svg" alt="" class="visa" />
+          </div>
         </div>
         <div class="cards">
           <h1 class="header">Support</h1>
           <p class="content">
-            get 24/7 support with our highly trained agents.
+            Get 24/7 support with our highly trained agents.
           </p>
+          <div class="message">
+            <img src="../assets/message.png" alt="" class="support" />
+          </div>
         </div>
         <div class="cards">
           <h1 class="header">Cryptocurrency</h1>
@@ -57,6 +61,19 @@
       </div>
     </div>
   </section>
+  <div class="custom-shape-divider-top-1662401280">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
+        class="shape-fill"
+      ></path>
+    </svg>
+  </div>
 </template>
 <script>
 export default {};
@@ -92,7 +109,7 @@ export default {};
 }
 
 .about {
-  background: #3299f6;
+  background: rgb(243, 243, 243);
   height: fit-content;
   width: 100%;
   padding-bottom: 10rem;
@@ -129,7 +146,7 @@ export default {};
   padding-top: 4rem;
 }
 .cards {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgb(255, 255, 255);
   border-radius: 10px;
   width: 25rem;
   height: 20rem;
@@ -137,7 +154,7 @@ export default {};
   padding: 1rem;
 }
 .cards:hover {
-  box-shadow: 5px 5px 0px 0px white;
+  box-shadow: 5px 5px 0px 0px blue;
   transform: translate(-3px, -3px);
 }
 .text {
@@ -149,7 +166,7 @@ export default {};
   padding-top: 5rem;
 }
 .subheading {
-  color: white;
+  color: rgba(81, 81, 81, 0.833);
   font-family: "Satoshi-Variable";
   font-weight: 500;
   text-align: center;
@@ -159,10 +176,10 @@ export default {};
 }
 .title {
   font-family: "Satoshi-Variable";
-  font-weight: 600;
-  font-size: 44px;
+  font-weight: 700;
+  font-size: 3rem;
   line-height: 60px;
-  color: white;
+  color: black;
   white-space: nowrap;
   text-align: center;
 }
@@ -173,24 +190,69 @@ export default {};
   font-weight: 500;
   font-size: 18px;
   margin: 0 auto;
-  padding-right: 2rem;
+  padding-right: 0.5rem;
 }
 .header {
   font-family: "Satoshi-Variable";
   font-weight: 700;
   font-size: 1.5rem;
   color: rgb(0, 0, 0);
-  padding-bottom: .3rem;
+  padding-bottom: 0.3rem;
 }
-.debitcredit{
-
+.debitcredit {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
-.visa{
+.visa {
+  width: 100px;
+  background: rgba(255, 255, 255, 0.534);
   border-radius: 50%;
-  width: 120px;
-  filter: brightness(0.85);
+  padding: 1rem;
+  margin-left: -1rem;
+  box-shadow: 1px 1px 10px 1px rgba(22, 22, 22, 0.212);
+  z-index: 0;
 }
-.mastercard{
-  width: 120px;
+.mastercard {
+  width: 100px;
+
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 1rem;
+  box-shadow: 1px 1px 10px 1px rgba(22, 22, 22, 0.212);
+  background: rgba(255, 255, 255, 0.534);
+  z-index: 1;
+}
+.custom-shape-divider-top-1662401280 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1662401280 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 36px;
+}
+
+.custom-shape-divider-top-1662401280 .shape-fill {
+  fill: #f3f3f3;
+}
+.support {
+  border-radius: 50%;
+  width: 140px;
+  height: fit-content;
+  box-shadow: 1px 1px 10px 1px rgba(22, 22, 22, 0.212);
+  background: rgba(255, 255, 255, 0.534);
+}
+.message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
