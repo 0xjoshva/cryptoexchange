@@ -70,7 +70,7 @@ section {
   display: block;
   width: calc(100% + 1.3px);
   height: 78px;
-  transform: rotateY(180deg), translateY(-10px);
+  transform: rotateY(180deg), translateY(-1px);
 
 }
 

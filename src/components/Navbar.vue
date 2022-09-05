@@ -106,7 +106,6 @@ nav {
 }
 .nav-links {
   display: flex;
-
   padding-right: 10rem;
 }
 .home {
