@@ -14,7 +14,7 @@ const routes = [
   {
     path: "/market-overview",
     name: "markets",
-    component: () => import("../views/MarketsView.vue"),
+    component: () => import("../views/MarketOverView.vue"),
   },
   {
     path: "/dashboard",
