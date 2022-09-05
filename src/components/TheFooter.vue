@@ -116,4 +116,10 @@ section {
   margin-left: 0.2rem;
   width: 40px;
 }
+.bottom-bar p {
+  font-family: "Segoe UI";
+  color: rgb(89, 90, 143);
+  font-weight: 600;
+  width: fit-content;
+}
 </style>

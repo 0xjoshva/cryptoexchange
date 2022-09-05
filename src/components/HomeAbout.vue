@@ -24,8 +24,8 @@
       </svg>
     </div>
     <div class="text">
-      <h3>Build your digital asset portfolio with ease</h3>
-      <p>
+      <h3 class="title">Build your digital asset portfolio with ease</h3>
+      <p class="subheading">
         Choose from a growing list of 6 different cryptocurrencies, all at your
         own time and in the comfort of your own home. Get the best service you
         could possible imagine only with us, boasting 24/7 realtime support all
@@ -33,18 +33,26 @@
       </p>
       <div class="container">
         <div class="cards">
-          <h1>
-            Debit / Credit cards
-          </h1>
-          <p>buy cryptocurrency easily with Mastercard and Visa</p>
+          <h1 class="header">Debit / Credit cards</h1>
+          <p class="content">
+            buy cryptocurrency easily with Mastercard, Visa, and American
+            Express
+          </p>
+          <div class="debitcredit"></div>
+          <img src="../assets/mastercardpng.png" alt="" class="mastercard">
+          <img src="../assets/visa.png" alt="" class="visa">
         </div>
         <div class="cards">
-         <h1>Support</h1>
-         <p>get 24/7 support with our highly trained agents.</p>
+          <h1 class="header">Support</h1>
+          <p class="content">
+            get 24/7 support with our highly trained agents.
+          </p>
         </div>
         <div class="cards">
-          <h1>Cryptocurrency</h1>
-          <p>Choose from 7 different currencies to build your portfolio</p>
+          <h1 class="header">Cryptocurrency</h1>
+          <p class="content">
+            Choose from 7 different currencies to build your portfolio
+          </p>
         </div>
       </div>
     </div>
@@ -88,8 +96,6 @@ export default {};
   height: fit-content;
   width: 100%;
   padding-bottom: 10rem;
-  border-bottom-left-radius: 25%;
-  border-bottom-right-radius: 25%;
 }
 
 .icons {
@@ -125,9 +131,10 @@ export default {};
 .cards {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  width: 300px;
-  height: 270px;
+  width: 25rem;
+  height: 20rem;
   transition: 0.4s all ease-in-out;
+  padding: 1rem;
 }
 .cards:hover {
   box-shadow: 5px 5px 0px 0px white;
@@ -141,7 +148,7 @@ export default {};
   flex-direction: column;
   padding-top: 5rem;
 }
-.text p {
+.subheading {
   color: white;
   font-family: "Satoshi-Variable";
   font-weight: 500;
@@ -150,7 +157,7 @@ export default {};
   width: 40%;
   margin: 0 auto;
 }
-h3 {
+.title {
   font-family: "Satoshi-Variable";
   font-weight: 600;
   font-size: 44px;
@@ -158,5 +165,32 @@ h3 {
   color: white;
   white-space: nowrap;
   text-align: center;
+}
+.content {
+  padding-bottom: 0.5rem;
+  color: rgba(81, 81, 81, 0.833);
+  font-family: "Satoshi-Variable";
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 auto;
+  padding-right: 2rem;
+}
+.header {
+  font-family: "Satoshi-Variable";
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  padding-bottom: .3rem;
+}
+.debitcredit{
+
+}
+.visa{
+  border-radius: 50%;
+  width: 120px;
+  filter: brightness(0.85);
+}
+.mastercard{
+  width: 120px;
 }
 </style>
