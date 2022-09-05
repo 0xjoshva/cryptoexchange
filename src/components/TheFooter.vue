@@ -1,7 +1,8 @@
 <template>
   <section>
+    
     <div class="footer">
-      <img src="" alt="logo" />
+      <div class="flogo"><img src="../assets/logo2.png" alt="logo" /> tide | exchange</div>
       <div class="container">
         <p class="header">Buy/Trade</p>
         <a href="">Pricing</a>
@@ -16,7 +17,6 @@
         <a href="">Support</a>
         <a href="">Register</a>
         <a href="">Login</a>
-
       </div>
       <div class="container">
         <p class="header">Social</p>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="bottom-bar">
-      <p>© 2022 tide | exchange, All Rights Reserved</p>
+      <p>© 2022 Joshua Steed, All Rights Reserved</p>
     </div>
   </section>
 </template>
@@ -38,6 +38,7 @@ export default {};
 section {
   width: 100%;
   height: fit-content;
+  background: white;
 }
 .footer {
   display: flex;

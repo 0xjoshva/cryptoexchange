@@ -132,7 +132,7 @@ export default {
 .author {
   font-family: "Segoe UI";
   font-weight: 600;
-  color: rgb(0, 0, 255);
+  color: black;
 }
 .authorimg {
   width: 35px;
