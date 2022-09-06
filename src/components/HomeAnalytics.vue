@@ -23,7 +23,7 @@ section {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10rem;
-  padding-top: 10rem;
+  padding-top: 17rem;
 }
 .header {
   font-family: "Satoshi-Variable";

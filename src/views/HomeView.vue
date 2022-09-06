@@ -1,10 +1,10 @@
 <template>
   <Landing />
   <About />
-  <Analytics />
   <BlogPreview />
+  <Analytics />
   <App />
-  <Footer/>
+  <Footer />
 </template>
 <script>
 import Landing from "@/components/HomeLanding.vue";

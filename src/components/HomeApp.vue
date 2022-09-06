@@ -49,7 +49,7 @@ section {
   height: fit-content;
   display: flex;
   padding-bottom: 10rem;
-  padding-top: 8rem;
+  padding-top: 2rem;
 }
 #appstore {
   height: 54px;

@@ -68,6 +68,7 @@ section {
   height: 80vh;
   background: var(--bgcolor);
   color: white;
+  padding-top: 10rem;
 }
 router-link {
   text-decoration: none;
@@ -125,7 +126,7 @@ a {
 .cards:nth-child(2):hover {
   transform: scale(1.05);
 }
-.cards:focus{
+.cards:focus {
   transform: scale(0.85);
 }
 .img {
