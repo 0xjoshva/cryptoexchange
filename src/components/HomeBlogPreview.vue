@@ -9,7 +9,7 @@
     </div>
 
     <div class="container">
-      <router-link to="/blog" class="cards">
+      <router-link to="/blog/7" class="cards">
         <img src="../assets/adidas.jpg" alt="" class="img" />
         <div class="text">
           <h6 class="title">How Your Brand Should Use NFTs</h6>
@@ -24,7 +24,7 @@
         </div>
       </router-link>
 
-      <router-link to="/blog" class="cards">
+      <router-link to="/blog/3" class="cards">
         <img src="../assets/markzuck.jpg" alt="" class="img" />
         <div class="text">
           <h6 class="title">
@@ -43,7 +43,7 @@
         </div>
       </router-link>
 
-      <router-link to="/blog" class="cards">
+      <router-link to="/blog/5" class="cards">
         <img src="../assets/nftmoney.jpg" alt="" class="img" />
         <div class="text">
           <h6 class="title">How NFTs Create Value</h6>

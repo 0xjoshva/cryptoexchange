@@ -1,7 +1,7 @@
 <template>
   <section id="blog">
     <div v-if="blogs" class="bigcontainer">
-      <div class="container">
+      <router-link to="/blog/3" class="container">
         <span id="badge">Featured</span>
         <h6 class="header">
           Mark Zuckerberg responds to <br />
@@ -21,7 +21,7 @@
             Lupus
           </p>
         </div>
-      </div>
+      </router-link>
       <h1 class="headline">
         Trending News
         <svg

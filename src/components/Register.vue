@@ -11,10 +11,30 @@
       </div>
       <form>
         <div id="inputgroup">
-          <input type="text" placeholder="John Doe" v-model="user_name" required />
-          <input type="email" placeholder="example@email.com" v-model="email" required />
-          <input type="password" placeholder="Password" v-model="password" required />
-          <input type="tel" placeholder="Phone Number" v-model="phone_number" required />
+          <input
+            type="text"
+            placeholder="John Doe"
+            v-model="user_name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="example@email.com"
+            v-model="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            v-model="password"
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            v-model="phone_number"
+            required
+          />
           <div class="terms">
             <input
               type="checkbox"
@@ -28,14 +48,16 @@
             </p>
           </div>
         </div>
-        <button type="submit" @click.prevent="register()" class="btn">Sign up</button>
+        <button type="submit" @click.prevent="register()" class="btn">
+          Sign up
+        </button>
       </form>
     </div>
   </section>
 </template>
 <script>
- export default {
-    data() {
+export default {
+  data() {
     return {
       user_name: "",
       email: "",
@@ -44,17 +66,17 @@
     };
   },
   methods: {
-    register() {
-      this.$store.dispatch("register", {
+    signUp() {
+      this.$store.dispatch("signUp", {
         user_name: this.user_name,
         email: this.email,
         password: this.password,
         phone_number: this.phone_number,
       });
-      this.$router.push("/store");
+      this.$router.push("/");
     },
   },
-}
+};
 </script>
 <style scoped>
 .register {
