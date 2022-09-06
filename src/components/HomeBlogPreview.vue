@@ -114,6 +114,7 @@ a {
   color: black;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px 10px #00000021;
 }
 .cards:nth-child(3):hover {
   transform: perspective(30rem) rotatey(-10deg);
@@ -123,6 +124,9 @@ a {
 }
 .cards:nth-child(2):hover {
   transform: scale(1.05);
+}
+.cards:focus{
+  transform: scale(0.85);
 }
 .img {
   width: 30rem;

@@ -1,10 +1,12 @@
 <template>
   <Blog />
+  <TheFooter/>
 </template>
 <script>
 import Blog from "../components/Blog.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 export default {
-  components: { Blog },
+  components: { Blog, TheFooter },
 };
 </script>
