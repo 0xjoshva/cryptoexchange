@@ -18,8 +18,11 @@
         </thead>
         <tbody>
           <div v-if="cryptos">
-            <tr v-for="crypto of cryptos" :key="crypto.crypto_id" :crypto="crypto">
-
+            <tr
+              v-for="crypto of cryptos"
+              :key="crypto.crypto_id"
+              :crypto="crypto"
+            >
               <td class="tg-0lax"><img v-bind:src="crypto.icon" alt="" /></td>
               <td class="tg-0lax">{{ crypto.crypto_name }}</td>
               <td class="tg-0lax">{{ crypto.abbreviation }}</td>
@@ -54,12 +57,14 @@
 <script>
 export default {
   props: ["crypto_id"],
-  methods: {},
   mounted() {
     this.$store.dispatch("getCryptos");
   },
-  cryptos() {
-    return this.$store.state.cryptos;
+  methods: {},
+  computed: {
+    cryptos() {
+      return this.$store.state.cryptos;
+    },
   },
 };
 </script>
