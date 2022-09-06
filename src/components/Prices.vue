@@ -17,15 +17,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="tg-0lax"><img src="../assets/eth.svg" alt=""></td>
-            <td class="tg-0lax">Ethereum</td>
-            <td class="tg-0lax">ETH</td>
-            <td class="tg-0lax">1600$</td>
-            <td class="tg-0lax">+0.5%</td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-          </tr>
+          <div v-if="cryptos">
+            <tr v-for="crypto of cryptos" :key="crypto.crypto_id" :crypto="crypto">
+
+              <td class="tg-0lax"><img v-bind:src="crypto.icon" alt="" /></td>
+              <td class="tg-0lax">{{ crypto.crypto_name }}</td>
+              <td class="tg-0lax">{{ crypto.abbreviation }}</td>
+              <td class="tg-0lax">R {{ crypto.price }}</td>
+              <td class="tg-0lax">+0.5%</td>
+              <td class="tg-0lax">123123</td>
+              <td class="tg-0lax">12321313</td>
+            </tr>
+          </div>
         </tbody>
       </table>
     </div>
@@ -49,7 +52,16 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: ["crypto_id"],
+  methods: {},
+  mounted() {
+    this.$store.dispatch("getCryptos");
+  },
+  cryptos() {
+    return this.$store.state.cryptos;
+  },
+};
 </script>
 <style scoped>
 section {
@@ -120,5 +132,9 @@ section {
 .namerow {
   display: flex;
   column-gap: 1rem;
+}
+img {
+  width: 32px;
+  height: 32px;
 }
 </style>
