@@ -10,6 +10,7 @@
       >
       <router-link to="/blog" class="nav-link">Blog</router-link>
       <router-link to="/support" class="nav-link">Support</router-link>
+      <router-link to="/admin" class="nav-link">Admin Panel</router-link>
       <router-link to="/register" class="nav-link">Sign Up</router-link>
       <button
         id="login"
@@ -39,12 +40,28 @@
             <div class="modal-body">
               Sign in
               <label for="email"
-                >Email <br /><input name="email" type="email" required
+                >Email <br /><input
+                  name="email"
+                  type="email"
+                  v-model="email"
+                  required
               /></label>
-              <label for="password">Password <br><input name="password" type="password" required /></label>
+              <label for="password"
+                >Password <br /><input
+                  name="password"
+                  type="password"
+                  v-model="password"
+                  required
+              /></label>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Sign in</button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                @click.prevent="Login()"
+              >
+                Sign in
+              </button>
             </div>
           </div>
         </div>
@@ -54,6 +71,25 @@
 </template>
 <script>
 export default {
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    Login() {
+      this.$store.dispatch("Login", {
+        email: this.email,
+        password: this.password,
+      });
+    },
+  },
   mounted() {
     function activeLinks() {
       let navLinks = document.querySelector(".nav-link");

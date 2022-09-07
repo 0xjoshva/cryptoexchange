@@ -5,12 +5,14 @@
       <p>With our analytics data you can keep track of your funds.</p>
       <p>
         This gives you insight to the amount you have spent and the amount of
-        each crypto you own. <br> <br> To stay ahead of the curve, we continuously work on
-        strengthening tide's functionality and we aim to be a leading platform for
-        digital assets while expanding to our full potential.
+        each crypto you own. <br />
+        <br />
+        To stay ahead of the curve, we continuously work on strengthening tide's
+        functionality and we aim to be a leading platform for digital assets
+        while expanding to our full potential.
       </p>
     </div>
-    <img src="../assets/dash.png" alt="" />
+      <img src="../assets/dash.png" alt="" />
   </section>
 </template>
 <script>

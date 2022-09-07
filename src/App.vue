@@ -3,8 +3,8 @@
   <router-view />
 </template>
 <script>
-import Sidebar from "./components/Sidebar.vue";
-import Navbar from "./components/Navbar.vue";
+import Sidebar from "./components/TheSidebar.vue";
+import Navbar from "./components/TheNavbar.vue";
 export default {
   name: "App",
   components: { Sidebar, Navbar },

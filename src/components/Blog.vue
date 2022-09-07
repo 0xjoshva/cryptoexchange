@@ -42,8 +42,8 @@
         </svg>
       </h1>
 
-      <div v-for="blog in blogs" v-bind:key="blog.id" class="article">
-        <router-link :to="{ name: 'BlogView', params: { id: blog.id } }">
+      <div v-for="blog in blogs" v-bind:key="blog.id" blog="blog" class="article">
+        <router-link :to="{ name: 'BlogSingleView', params: { id: blog.id } }">
           <img v-bind:src="blog.image" alt="" />
           <div class="text">
             <h6 class="aheader">{{ blog.title }}</h6>
@@ -97,7 +97,7 @@
 </template>
 <script>
 export default {
-  props: ["blog_id"],
+  props: ["id", "blog"],
   mounted() {
     this.$store.dispatch("getBlogs");
   },

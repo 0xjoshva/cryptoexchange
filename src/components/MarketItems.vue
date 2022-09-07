@@ -2,19 +2,19 @@
   <section>
     <div v-if="cryptos">
       <div id="markets">
-        <h1>Cryptocurrencies</h1>
+        <!-- <h1>Cryptocurrencies</h1>
         <input type="search" />
-        <button onclick="filteredCryptos()">S</button>
+        <button onclick="filteredCryptos()">S</button> -->
         <table class="tg">
           <thead>
             <tr>
               <th class="tg-0lax">Name</th>
-              <th class="tg-0lax"></th>
-              <th class="tg-0lax"></th>
               <th class="tg-0lax">Price</th>
               <th class="tg-0lax">24H Change</th>
+              <th class="tg-0lax">24H Volume</th>
               <th class="tg-0lax">Market Cap</th>
               <th class="tg-0lax">Graph</th>
+              <th class="tg-0lax"></th>
             </tr>
           </thead>
           <tbody>
@@ -23,13 +23,25 @@
               :key="crypto.crypto_id"
               :crypto="crypto"
             >
-              <td class="tg-0lax"><img v-bind:src="crypto.icon" alt="" /></td>
-              <td class="tg-0lax">{{ crypto.crypto_name }}</td>
-              <td class="tg-0lax">{{ crypto.abbreviation }}</td>
-              <td class="tg-0lax">R {{ crypto.price }}</td>
-              <td class="tg-0lax">+0.5%</td>
-              <td class="tg-0lax">123123</td>
-              <td class="tg-0lax">12321313</td>
+              <td class="name-container">
+                <img v-bind:src="crypto.icon" alt="" class="icon" />
+                <div class="name-wrapper">
+                  <p class="name">{{ crypto.crypto_name }}</p>
+                  <p class="abv">{{ crypto.abbreviation }}</p>
+                </div>
+              </td>
+              <td>R {{ crypto.price }}</td>
+              <td>+0.5%</td>
+              <td>123123</td>
+              <td>123123</td>
+              <td>12321313</td>
+              <td>
+                <router-link
+                  id="buybtn"
+                  :to="{ name: 'MarketView', params: { id: crypto.crypto_id } }"
+                  >Buy</router-link
+                >
+              </td>
             </tr>
           </tbody>
         </table>
@@ -72,9 +84,10 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
-  props: ["crypto_id"],
+  props: ["crypto_id", "crypto"],
   mounted() {
     this.$store.dispatch("getCryptos");
   },
@@ -83,28 +96,10 @@ export default {
     cryptos() {
       return this.$store.state.cryptos;
     },
-    filteredCryptos() {
-      return this.$store.state.cryptos?.filter((crypto) => {
-        let isMatch = true;
-        if (
-          !crypto.crypto_name
-            ?.toLowerCase()
-            .includes(this.searchTitle.toLowerCase())
-        ) {
-          isMatch = false;
-        }
-        if (
-          this.categoryFilter !== "All" &&
-          piece.category !== this.categoryFilter
-        ) {
-          isMatch = false;
-        }
-        return isMatch;
-      });
-    },
   },
 };
 </script>
+
 <style scoped>
 section {
   background: var(--bgcolor);
@@ -118,33 +113,75 @@ section {
   height: fit-content;
   width: fit-content;
   background: white;
-  padding: 3rem;
   border-radius: 20px;
+  padding-top: 1rem;
 }
 .tg {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.name-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1rem;
+}
+img {
+  width: 40px;
+  height: 40px;
+}
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.name-wrapper p {
+  font-family: "Segoe UI";
+  font-weight: 500;
+}
+.abv {
+  filter: opacity(0.6);
+}
 .tg td {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI";
+  font-weight: 500;
   font-size: 14px;
   overflow: hidden;
-  padding: 10px 5px;
   word-break: normal;
+  font-size: 1rem;
+  padding: 1rem;
+  padding-left: 2rem;
+}
+tr {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.521);
+  transition: background 0.3s ease-in-out;
+}
+tr:nth-last-of-type(1) {
+  border-bottom: none;
+  padding-bottom: 2rem;
+}
+tr:nth-last-of-type(1):hover {
+  background-color: white;
+}
+tr:hover {
+  background-color: #bfd5ff1f;
 }
 .tg th {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-family: Arial, sans-serif;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.521);
   font-size: 14px;
   font-weight: normal;
   overflow: hidden;
   padding: 10px 5px;
   word-break: normal;
+  color: #aab0bd;
+  font-family: "Satoshi-Variable";
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: 0.1s all ease-in-out;
+  padding-right: 6rem;
+  padding-left: 2rem;
+}
+.tg th:hover {
+  color: #365fb3;
 }
 .tg .tg-0lax {
   text-align: left;
@@ -175,10 +212,7 @@ section {
   display: flex;
   column-gap: 1rem;
 }
-img {
-  width: 32px;
-  height: 32px;
-}
+
 /* Spinner */
 .spinner {
   color: rgb(229, 231, 235);
@@ -208,5 +242,11 @@ img {
   width: 100%;
   height: 70vh;
   align-items: center;
+}
+#buybtn {
+  text-decoration: none;
+  background: rgba(48, 115, 216, 0.116);
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
 }
 </style>

@@ -3,7 +3,7 @@
 <TheFooter/>
 </template>
 <script>
-import Prices from '@/components/Prices.vue';
+import Prices from '@/components/MarketItems.vue';
 import TheFooter from '@/components/TheFooter.vue';
 
 export default {
