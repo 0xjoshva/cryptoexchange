@@ -71,13 +71,13 @@ export default createStore({
         .then((response) => response.json())
         .then((json) => context.commit("setCryptos", json));
     },
-    getCrypto: async (context) => {
-            fetch("https://capstone-eomp.herokuapp.com/cryptos/" + crypto_id)
-              .then((response) => response.json())
-              .then((data) => {
-                console.log(data);
-                context.commit("setCrypto", data[0]);
-              });
+    getCrypto: async (context, crypto_id) => {
+      fetch("https://capstone-eomp.herokuapp.com/cryptos/" + crypto_id)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          context.commit("setCrypto", data[0]);
+        });
     },
     getBlogs: async (context) => {
       fetch("https://capstone-eomp.herokuapp.com/blogs")
@@ -87,8 +87,10 @@ export default createStore({
     getBlog: async (context, id) => {
       fetch("https://capstone-eomp.herokuapp.com/blogs/" + id)
         .then((response) => response.json())
-        .then((data) => { console.log(data);  context.commit("setBlog", data[0]);
-    })
+        .then((data) => {
+          console.log(data);
+          context.commit("setBlog", data[0]);
+        });
     },
     signUp: async (context, payload) => {
       fetch("https://capstone-eomp.herokuapp.com/users/register/", {

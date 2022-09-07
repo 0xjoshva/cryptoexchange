@@ -38,7 +38,7 @@
               <td>
                 <router-link
                   id="buybtn"
-                  :to="{ name: 'MarketView', params: { id: crypto.crypto_id } }"
+                  :to="{ name: 'MarketSingleView', params: { id: crypto.crypto_id } }"
                   >Buy</router-link
                 >
               </td>
