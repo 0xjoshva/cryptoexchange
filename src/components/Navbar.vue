@@ -1,10 +1,13 @@
 <template>
   <nav>
     <router-link to="/" class="home"
-      ><img src="../assets/logo.png" alt="" /> tide | exchange</router-link
-    >
+      ><img src="../assets/logo.png" alt="" />
+      <p>tide | exchange</p>
+    </router-link>
     <div class="nav-links">
-      <router-link to="/market-overview" class="nav-link">Market Overview</router-link>
+      <router-link to="/market-overview" class="nav-link"
+        >Market Overview</router-link
+      >
       <router-link to="/blog" class="nav-link">Blog</router-link>
       <router-link to="/support" class="nav-link">Support</router-link>
       <router-link to="/register" class="nav-link">Sign Up</router-link>
@@ -26,7 +29,6 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -34,18 +36,15 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">...</div>
+            <div class="modal-body">
+              Sign in
+              <label for="email"
+                >Email <br /><input name="email" type="email" required
+              /></label>
+              <label for="password">Password <br><input name="password" type="password" required /></label>
+            </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
+              <button type="button" class="btn btn-primary">Sign in</button>
             </div>
           </div>
         </div>
@@ -67,9 +66,6 @@ export default {
 };
 </script>
 <style scoped>
-.router-link-active {
-  color: red;
-}
 nav {
   height: 100px;
   width: 100%;
@@ -108,19 +104,31 @@ nav {
   display: flex;
   padding-right: 10rem;
 }
+.router-link-active {
+  color: var(--highlight);
+}
 .home {
   padding-left: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 img {
   width: 60px;
   height: auto;
 }
-.home {
-  text-decoration: none;
+.home p {
+  text-decoration: none !important;
   color: white;
   font-family: "Satoshi-Variable";
   font-size: 22px;
   font-weight: bold;
+  white-space: nowrap;
+  padding-left: 0.4rem;
+}
+.home a {
+  text-decoration: none;
 }
 
 form {
@@ -170,5 +178,18 @@ form {
 
 .modal-backdrop {
   z-index: 0 !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .home p {
+    display: none;
+  }
+  .home {
+    padding-left: 3rem;
+  }
+  .nav-links {
+    padding-right: 3rem;
+  }
 }
 </style>

@@ -55,7 +55,7 @@ export default createStore({
         .then((json) => context.commit("setBlog", json));
     },
     signUp: async (context, payload) => {
-      fetch("https://capstone-eomp.herokuapp.com/users/register", {
+      fetch("https://capstone-eomp.herokuapp.com/users/register/", {
         method: "POST",
         body: JSON.stringify({
           user_name: payload.user_name,

@@ -48,7 +48,7 @@
             </p>
           </div>
         </div>
-        <button type="submit" @click.prevent="register()" class="btn">
+        <button type="submit" @click.prevent="signUp()" class="btn">
           Sign up
         </button>
       </form>

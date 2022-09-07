@@ -21,7 +21,6 @@ export default {
   font-style: normal;
 }
 
-
 /* CSS RESET */
 html {
   box-sizing: border-box;
@@ -91,5 +90,26 @@ img {
   background-color: white;
 }
 
+.modal-backdrop {
+  z-index: 0;
+}
 
+.modal-content {
+  width: 25rem;
+  height: 30rem;
+  border-radius: 0;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0px 0px 11px 0px #0084ffdb;
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-footer {
+  border-top: none;
+  padding-bottom: 3rem;
+}
+.btn-primary {
+  border-radius: 0;
+  padding: 0.5rem 1.6rem;
+}
 </style>
