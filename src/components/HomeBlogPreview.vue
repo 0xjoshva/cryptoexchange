@@ -105,7 +105,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+  column-gap: 1rem;
 }
 .cards {
   border: 3px solid white;
