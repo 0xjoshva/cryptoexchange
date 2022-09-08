@@ -109,7 +109,7 @@ export default createStore({
           phone_number: payload.phone_number,
         }),
         headers: {
-          "Content-type": "application/json",
+          "Content-type": "application/json", 
         },
       })
         .then((response) => response.json())

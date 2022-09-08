@@ -33,7 +33,7 @@ export default {};
 <style scoped>
 .landing {
   width: 100%;
-  height: 92vh;
+  height: 100vh;
   background: var(--bgcolor);
   color: white;
   display: flex;

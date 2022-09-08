@@ -13,30 +13,12 @@
       <div v-if="user.user_type === 'admin'">
         <router-link to="/admin" class="nav-link">Admin Panel</router-link>
       </div>
-      <div v-if="user.user_type !== 'admin'"></div>
+      <div v-if="`{{user.user_type}}` !== 'admin'"></div>
       <div v-if="user" id="accountdiv">
         <router-link to="Account" class="nav-link">{{
           user.user_name.charAt(0).toUpperCase() + user.user_name.slice(1)
         }}</router-link>
-        <Button class="nav-link" @click="Logout()" id="logout-btn"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-logout"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#ff2825"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
-            />
-            <path d="M7 12h14l-3 -3m0 6l3 -3" /></svg
-        ></Button>
+        <Button class="nav-link" @click="Logout()" id="logout-btn"></Button>
       </div>
       <div v-else class="login-signup">
         <router-link to="/register" class="nav-link">Sign Up</router-link>
@@ -119,9 +101,11 @@ export default {
         email: this.email,
         password: this.password,
       });
+      this.$router.push("/account");
     },
     Logout() {
       this.$store.commit("logout");
+      this.$router.push("/");
     },
   },
   mounted() {

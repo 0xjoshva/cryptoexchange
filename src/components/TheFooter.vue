@@ -1,5 +1,6 @@
 <template>
   <section>
+    <TheFooterWave />
     <div class="footer">
       <div class="container">
         <div class="flogo">
@@ -9,24 +10,26 @@
 
       <div class="container">
         <p class="header">Get Started</p>
-        <a href="">Support</a>
-        <a href="">Register</a>
-        <a href="">Login</a>
+        <router-link to="/support">About Us</router-link>
+        <router-link to="/support">Support</router-link>
+        <router-link to="/register">Register</router-link>
       </div>
 
       <div class="container">
         <p class="header">Buy/Trade</p>
-        <a href="">Pricing</a>
-        <a href="">Buy Bitcoin</a>
-        <a href="">Buy Ethereum</a>
-        <a href="">Buy Solana</a>
-        <a href="">Buy Monero</a>
-        <a href="">Buy XRP</a>
+        <router-link to="/market-overview" href="">Pricing</router-link>
+        <router-link to="/crypto/1" href="">Buy Bitcoin</router-link>
+        <router-link to="/crypto/2" href="">Buy Ethereum</router-link>
+        <router-link to="/crypto/7" href="">Buy Solana</router-link>
+        <router-link to="/crypto/5" href="">Buy Monero</router-link>
+        <router-link to="/crypto/6" href="">Buy Dogecoin</router-link>
+        <router-link to="/crypto/4" href="">Buy XRP</router-link>
+        <router-link to="/crypto/3" href="">Buy BNB</router-link>
       </div>
 
       <div class="container">
         <p class="header">Social</p>
-        <a href="">Blog</a>
+        <router-link to="/blog" href="">Blog</router-link>
         <a href="">Facebook</a>
         <a href="">Twitter</a>
         <a href="">Instagram</a>
@@ -34,8 +37,9 @@
     </div>
     <div class="bottom-bar">
       <div class="payment">
-        <img src="../assets/visa.svg" alt="" />
-        <img src="../assets/mastercard.svg" alt="" />
+        <img src="../assets/visa.svg" alt="" class="pmethod visa" />
+        <img src="../assets/mastercard.svg" alt="" class="pmethod" />
+        <img src="../assets/amex.svg" alt="" class="pmethod" />
       </div>
       <p>© 2022 Joshua Steed, All Rights Reserved</p>
       <div>
@@ -50,16 +54,17 @@
   </section>
 </template>
 <script>
-export default {};
+import TheFooterWave from "./TheFooterWave.vue";
+export default { components: { TheFooterWave } };
 </script>
 <style scoped>
 section {
   width: 100%;
   height: fit-content;
   background: white;
-  padding-top: 2rem;
 }
 .footer {
+  padding-top: 2rem;
   width: 100%;
   display: flex;
   padding-bottom: 2rem;
@@ -119,7 +124,11 @@ section {
 .bottom-bar p {
   font-family: "Segoe UI";
   color: rgb(89, 90, 143);
-  font-weight: 600;
+  font-weight: 00;
   width: fit-content;
+}
+.pmethod {
+  border-radius: 2px;
+  border: 1px solid rgb(194, 194, 194);
 }
 </style>

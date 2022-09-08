@@ -65,7 +65,7 @@ export default {};
 <style scoped>
 section {
   width: 100%;
-  height: 80vh;
+  height: fit-content;
   background: var(--bgcolor);
   color: white;
   padding-top: 10rem;
@@ -99,13 +99,13 @@ a {
   filter: opacity(0.7);
 }
 .container {
+  height: max-content;
   width: 100%;
-  height: fit-content;
   display: flex;
   flex-direction: row;
-  column-gap: 2rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  
 }
 .cards {
   border: 3px solid white;
@@ -118,19 +118,16 @@ a {
   box-shadow: 0px 0px 10px 10px #00000021;
 }
 .cards:nth-child(3):hover {
-  transform: perspective(30rem) rotatey(-10deg);
+  transform: perspective(30rem) rotateY(-10deg);
 }
 .cards:nth-child(1):hover {
-  transform: perspective(30rem) rotatey(10deg);
+  transform: perspective(30rem) rotateY(10deg);
 }
 .cards:nth-child(2):hover {
   transform: scale(1.05);
 }
-.cards:focus {
-  transform: scale(0.85);
-}
 .img {
-  width: 30rem;
+  width: 100%;
   height: 15rem;
   object-fit: cover;
   object-position: top;
@@ -146,6 +143,7 @@ a {
   font-size: 1.3rem;
   text-decoration: none;
   padding-bottom: 0.4rem;
+  width: fit-content;
 }
 .blurb {
   padding-bottom: 0.8rem;

@@ -26,10 +26,7 @@
     <div class="text">
       <h3 class="title">Build your digital asset portfolio with ease</h3>
       <p class="subheading">
-        Choose from a growing list of 6 different cryptocurrencies, all at your
-        own time and in the comfort of your own home. Get the best service you
-        could possible imagine only with us, boasting 24/7 realtime support all
-        across the globe
+        Choose from a growing list of 7 different cryptocurrencies, and pay with your bank card
       </p>
       <div class="container">
         <div class="cards">
@@ -55,7 +52,7 @@
         <div class="cards">
           <h1 class="header">Cryptocurrency</h1>
           <p class="content">
-            Choose from 7 different currencies to build your portfolio
+            Choose from 7 different currencies to build your crypto portfolio
           </p>
         </div>
       </div>
@@ -154,7 +151,7 @@ export default {};
   padding: 1rem;
 }
 .cards:hover {
-  box-shadow: 5px 5px 0px 0px blue;
+  box-shadow: 5px 5px 0px 0px var(--bgcolor);
   transform: translate(-3px, -3px);
 }
 .text {
@@ -171,8 +168,11 @@ export default {};
   font-weight: 500;
   text-align: center;
   font-size: 18px;
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
+  font-family: "Satoshi-Variable";
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 .title {
   font-family: "Satoshi-Variable";
@@ -180,6 +180,8 @@ export default {};
   font-size: 3rem;
   line-height: 60px;
   color: black;
+  white-space: nowrap;
+  text-align: center;
   white-space: nowrap;
   text-align: center;
 }
@@ -211,7 +213,7 @@ export default {};
   border-radius: 50%;
   padding: 1rem;
   margin-left: -1rem;
-  box-shadow: 1px 1px 10px 1px rgba(22, 22, 22, 0.212);
+  box-shadow: 0px 0px 2px 1px rgba(22, 22, 22, 0.212);
   z-index: 0;
 }
 .mastercard {
@@ -220,8 +222,8 @@ export default {};
   border-radius: 50%;
   object-fit: contain;
   padding: 1rem;
-  box-shadow: 1px 1px 10px 1px rgba(22, 22, 22, 0.212);
-  background: rgba(255, 255, 255, 0.534);
+  box-shadow: 0px 0px 2px 1px rgba(22, 22, 22, 0.212);
+  background: rgba(255, 255, 255, 0.795);
   z-index: 1;
 }
 .custom-shape-divider-top-1662401280 {
@@ -247,10 +249,10 @@ export default {};
   border-radius: 50%;
   width: 140px;
   height: fit-content;
-  box-shadow: 1px 1px 10px 1px rgba(22, 22, 22, 0.212);
+  box-shadow: 0px 0px 2px 1px rgba(22, 22, 22, 0.212);
   background: rgba(255, 255, 255, 0.534);
 }
-.message{
+.message {
   display: flex;
   justify-content: center;
   align-items: center;
