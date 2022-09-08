@@ -1,6 +1,42 @@
 <template>
   <section>
-    <div v-if="cryptos">
+    <!-- WIDGET -->
+    <!-- <div
+      style="
+        height: 42px;
+        background-color: #ffffff;
+        overflow: hidden;
+        box-sizing: border-box;
+        border: 1px solid #56667f;
+        border-radius: 4px;
+        text-align: right;
+        line-height: 14px;
+        block-size: 42px;
+        font-size: 12px;
+        font-feature-settings: normal;
+        text-size-adjust: 100%;
+        padding: 1px;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+      "
+    >
+      <div style="height: 40px; padding: 0px; margin: 0px; width: 100%">
+        <iframe
+          src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1522&invert_hover=no"
+          width="100%"
+          height="36px"
+          scrolling="auto"
+          marginwidth="0"
+          marginheight="0"
+          frameborder="0"
+          border="0"
+          style="border: 0; margin: 0; padding: 0"
+        ></iframe>
+      </div>
+      
+    </div> -->
+    <div v-if="cryptos" id="marketcon">
       <div id="markets">
         <!-- <h1>Cryptocurrencies</h1>
         <input type="search" />
@@ -38,7 +74,10 @@
               <td>
                 <router-link
                   id="buybtn"
-                  :to="{ name: 'MarketSingleView', params: { id: crypto.crypto_id } }"
+                  :to="{
+                    name: 'MarketSingleView',
+                    params: { id: crypto.crypto_id },
+                  }"
                   >Buy</router-link
                 >
               </td>
@@ -47,6 +86,7 @@
         </table>
       </div>
     </div>
+
     <div v-else class="spinnerboxx">
       <svg
         role="status"
@@ -107,7 +147,8 @@ section {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 10rem;
+  flex-direction: column;
+  row-gap: 2rem;
 }
 #markets {
   height: fit-content;
@@ -161,6 +202,7 @@ tr:nth-last-of-type(1) {
 }
 tr:nth-last-of-type(1):hover {
   background-color: white;
+  border-radius: 20px;
 }
 tr:hover {
   background-color: #bfd5ff1f;
@@ -248,5 +290,21 @@ tr:hover {
   background: rgba(48, 115, 216, 0.116);
   padding: 0.4rem 1rem;
   border-radius: 5px;
+  border: 3px solid rgba(48, 115, 216, 0);
+  transition: 0.3s border ease-in-out;
+}
+#buybtn:hover {
+  border: 3px solid rgba(48, 115, 216, 0.116);
+}
+#buybtn:focus {
+  box-shadow: 0px 0px 0px 2px rgba(48, 115, 216, 0.5);
+}
+#marketcon {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
 }
 </style>

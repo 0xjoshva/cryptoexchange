@@ -98,8 +98,8 @@ img {
   width: 25rem;
   height: 30rem;
   border-radius: 0;
+  border-radius:4px;
   border-bottom-right-radius: 100px;
-  box-shadow: 0px 0px 11px 0px #0084ffdb;
 }
 .modal-header {
   border-bottom: none;

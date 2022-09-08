@@ -1,24 +1,10 @@
 <template>
-  <div v-if="cryptos" class="item">
-    <p>{{ crypto.crypto_name }}</p>
-    <p>{{ crypto.info }}</p>
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <!-- <div v-else class="spinnerboxx">
+  <section>
+    <div v-if="cryptos" class="item">
+      <p> {{cryptos.info}}</p>
+    </div>
+
+    <div v-else class="spinnerboxx">
     <svg
       role="status"
       class="spinner animation-spin"
@@ -35,13 +21,14 @@
         fill="currentFill"
       ></path>
     </svg>
-  </div> -->
+  </div>
+  </section>
 </template>
 <script>
 export default {
-  props: ["crypto_id"],
+  props: ["id"],
   mounted() {
-    this.$store.dispatch("getCrypto", this.$route.params.crypto_id);
+    this.$store.dispatch("getCrypto", this.$route.params.id);
   },
   methods: {},
   computed: {

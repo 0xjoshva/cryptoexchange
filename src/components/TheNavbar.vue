@@ -10,58 +10,88 @@
       >
       <router-link to="/blog" class="nav-link">Blog</router-link>
       <router-link to="/support" class="nav-link">Support</router-link>
-      <router-link to="/admin" class="nav-link">Admin Panel</router-link>
-      <router-link to="/register" class="nav-link">Sign Up</router-link>
-      <button
-        id="login"
-        class=""
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Login
-      </button>
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              Sign in
-              <label for="email"
-                >Email <br /><input
-                  name="email"
-                  type="email"
-                  v-model="email"
-                  required
-              /></label>
-              <label for="password"
-                >Password <br /><input
-                  name="password"
-                  type="password"
-                  v-model="password"
-                  required
-              /></label>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                @click.prevent="Login()"
-              >
+      <div v-if="user.user_type === 'admin'">
+        <router-link to="/admin" class="nav-link">Admin Panel</router-link>
+      </div>
+      <div v-if="user.user_type !== 'admin'"></div>
+      <div v-if="user" id="accountdiv">
+        <router-link to="Account" class="nav-link">{{
+          user.user_name.charAt(0).toUpperCase() + user.user_name.slice(1)
+        }}</router-link>
+        <Button class="nav-link" @click="Logout()" id="logout-btn"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-logout"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ff2825"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+            />
+            <path d="M7 12h14l-3 -3m0 6l3 -3" /></svg
+        ></Button>
+      </div>
+      <div v-else class="login-signup">
+        <router-link to="/register" class="nav-link">Sign Up</router-link>
+        <button
+          id="login"
+          class=""
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Login
+        </button>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
                 Sign in
-              </button>
+                <label for="email"
+                  >Email <br /><input
+                    name="email"
+                    type="email"
+                    v-model="email"
+                    required
+                /></label>
+                <label for="password"
+                  >Password <br /><input
+                    name="password"
+                    type="password"
+                    v-model="password"
+                    required
+                /></label>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  @click.prevent="Login()"
+                  data-bs-dismiss="modal"
+                >
+                  Sign in
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -70,7 +100,12 @@
   </nav>
 </template>
 <script>
+import Modal from "@/components/TheNavbarLoginModal.vue";
 export default {
+  components: {
+    Modal,
+  },
+  props: ["user.user_id"],
   computed: {
     user() {
       return this.$store.state.user;
@@ -89,6 +124,9 @@ export default {
         password: this.password,
       });
     },
+    Logout() {
+      this.$store.commit("logout");
+    },
   },
   mounted() {
     function activeLinks() {
@@ -98,6 +136,10 @@ export default {
         navLinks.classList.add("active");
       }
     }
+    function capitalizeFirstLetter(user) {
+      return user.user_name.charAt(0).toUpperCase() + user.user_name.slice(1);
+    }
+    capitalizeFirstLetter(user.user_name);
   },
 };
 </script>
@@ -227,5 +269,17 @@ form {
   .nav-links {
     padding-right: 3rem;
   }
+}
+.login-signup {
+  display: flex;
+}
+#logout-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: -1rem;
+}
+#accountdiv {
+  display: flex;
 }
 </style>

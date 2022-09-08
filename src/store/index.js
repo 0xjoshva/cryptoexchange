@@ -1,7 +1,9 @@
 import { createStore } from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
   state: {
+    users: null,
     user: null,
     token: null,
     cryptos: null,
@@ -10,6 +12,11 @@ export default createStore({
   },
   getters: {},
   mutations: {
+    logout(state) {
+      (state.user = ""),
+        (state.token = ""),
+        (state.users = "");
+    },
     setUser(state, user) {
       state.user = user;
     },
@@ -51,7 +58,7 @@ export default createStore({
             context.commit("setToken", data.token);
 
             // verify
-            fetch(`https://capstone-eomp.herokuapp.com/users/verify`, {
+            fetch(`https://capstone-eomp.herokuapp.com/users/users/verify`, {
               headers: {
                 "Content-Type": "application/json",
                 "x-auth-token": data.token,
@@ -71,8 +78,8 @@ export default createStore({
         .then((response) => response.json())
         .then((json) => context.commit("setCryptos", json));
     },
-    getCrypto: async (context, crypto_id) => {
-      fetch("https://capstone-eomp.herokuapp.com/cryptos/" + crypto_id)
+    getCrypto: async (context, id) => {
+      fetch("https://capstone-eomp.herokuapp.com/cryptos/" + id)
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
@@ -110,4 +117,5 @@ export default createStore({
     },
   },
   modules: {},
+  plugins: [createPersistedState()],
 });
