@@ -13,7 +13,7 @@
       <div v-if="user.user_type === 'admin'">
         <router-link to="/admin" class="nav-link">Admin Panel</router-link>
       </div>
-      <div v-if="`{{user.user_type}}` !== 'admin'"></div>
+      <div v-if="user.user_type !== 'admin'"></div>
       <div v-if="user" id="accountdiv">
         <router-link to="Account" class="nav-link">{{
           user.user_name.charAt(0).toUpperCase() + user.user_name.slice(1)
