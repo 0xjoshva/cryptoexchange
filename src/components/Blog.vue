@@ -42,7 +42,7 @@
         </svg>
       </h1>
 
-      <div v-for="blog in blogs" v-bind:key="blog.id" blog="blog" class="article">
+      <div v-for="blog in blogs" :key="blog.id" blog="blog" class="article">
         <router-link :to="{ name: 'BlogSingleView', params: { id: blog.id } }">
           <img v-bind:src="blog.image" alt="" />
           <div class="text">
