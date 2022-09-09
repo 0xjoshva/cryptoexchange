@@ -12,13 +12,18 @@ const routes = [
     component: () => import("../views/MarketView.vue"),
   },
   {
+    path: "/buy",
+    name: "buycrypto",
+    component: () => import("../views/BuyTransactionView.vue"),
+  },
+  {
     path: "/crypto/:id",
     name: "MarketSingleView",
     component: () => import("../views/MarketSingleView.vue"),
     props: true,
   },
   {
-    path: "/blog",
+    path: "/blog/",
     name: "blog",
     component: () => import("../views/BlogView.vue"),
   },

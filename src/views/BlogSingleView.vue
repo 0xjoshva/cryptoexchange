@@ -1,6 +1,7 @@
 <template>
   <section>
     <div v-if="blogs" class="item">
+      <img v-bind:src="blogs.image" alt="">
       <p>{{ blogs.title }}</p>
       <p>{{ blogs.article }}</p>
     </div>
@@ -68,5 +69,8 @@ export default {
   width: 100%;
   height: 100vh;
   align-items: center;
+}
+img{
+
 }
 </style>
