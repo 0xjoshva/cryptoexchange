@@ -90,9 +90,6 @@ export default {
     user() {
       return this.$store.state.user;
     },
-    // user_type() {
-    //   return this.$store.state.user_type;
-    // },
   },
   data() {
     return {
@@ -127,8 +124,7 @@ export default {
         navLinks.classList.add("active");
       }
     };
-    // this.$store.commit("setUser_Type");
-    this.ChangeUserType()
+    this.ChangeUserType();
 
 
   },
