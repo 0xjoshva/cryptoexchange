@@ -10,15 +10,17 @@
       >
       <router-link to="/blog" class="nav-link">Blog</router-link>
       <router-link to="/support" class="nav-link">Support</router-link>
-      <div v-if="user.user_type === 'admin'">
+      <div v-if="user_type === 'admin'">
         <router-link to="/admin" class="nav-link">Admin Panel</router-link>
       </div>
-      <div v-if="user.user_type !== 'admin'"></div>
+      <div v-if="user_type !== 'admin'"></div>
       <div v-if="user" id="accountdiv">
         <router-link to="Account" class="nav-link">{{
           user.user_name.charAt(0).toUpperCase() + user.user_name.slice(1)
         }}</router-link>
-        <Button class="nav-link" @click="Logout()" id="logout-btn"></Button>
+        <Button class="nav-link" @click="Logout()" id="logout-btn"
+          >Logout</Button
+        >
       </div>
       <div v-else class="login-signup">
         <router-link to="/register" class="nav-link">Sign Up</router-link>
@@ -88,11 +90,15 @@ export default {
     user() {
       return this.$store.state.user;
     },
+    // user_type() {
+    //   return this.$store.state.user_type;
+    // },
   },
   data() {
     return {
       email: "",
       password: "",
+      user_type:""
     };
   },
   methods: {
@@ -107,6 +113,11 @@ export default {
       this.$store.commit("logout");
       this.$router.push("/");
     },
+    ChangeUserType() {
+      if (this.user.user_type !== null) {
+        this.user_type = this.user.user_type  
+      }
+    }
   },
   mounted() {
     function activeLinks() {
@@ -115,7 +126,11 @@ export default {
       function changeClass() {
         navLinks.classList.add("active");
       }
-    }
+    };
+    // this.$store.commit("setUser_Type");
+    this.ChangeUserType()
+
+
   },
 };
 </script>

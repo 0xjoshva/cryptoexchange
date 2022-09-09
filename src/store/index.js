@@ -13,9 +13,7 @@ export default createStore({
   getters: {},
   mutations: {
     logout(state) {
-      (state.user = ""),
-        (state.token = ""),
-        (state.users = "");
+      (state.user = ""), (state.token = ""), (state.users = "");
     },
     setUser(state, user) {
       state.user = user;
@@ -23,7 +21,6 @@ export default createStore({
     setUsers(state, users) {
       state.users = users;
     },
-
     setToken: (state, token) => {
       state.token = token;
     },
@@ -109,7 +106,7 @@ export default createStore({
           phone_number: payload.phone_number,
         }),
         headers: {
-          "Content-type": "application/json", 
+          "Content-type": "application/json",
         },
       })
         .then((response) => response.json())
