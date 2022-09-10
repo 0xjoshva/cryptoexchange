@@ -7,11 +7,11 @@
       </div>
       <form action="https://formspree.io/f/mvoygdwl" method="POST">
         <div id="inputgroup">
-          <input type="text" placeholder="John Doe" />
-          <input type="email" placeholder="example@email.com" />
+          <input type="text" name="name surname" placeholder="John Doe" />
+          <input type="email" name="email" placeholder="example@email.com" />
         </div>
         <textarea
-          name=""
+          name="Message"
           id=""
           cols="30"
           rows="10"
