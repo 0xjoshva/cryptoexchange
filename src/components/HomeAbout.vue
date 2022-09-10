@@ -26,7 +26,8 @@
     <div class="text">
       <h3 class="title">Build your digital asset portfolio with ease</h3>
       <p class="subheading">
-        Choose from a growing list of 7 different cryptocurrencies, and pay with your bank card
+        Choose from a growing list of 7 different cryptocurrencies, and pay with
+        your bank card
       </p>
       <div class="container">
         <div class="cards">
@@ -36,8 +37,7 @@
             Express
           </p>
           <div class="debitcredit">
-            <img src="../assets/mastercard.svg" alt="" class="mastercard" />
-            <img src="../assets/visa.svg" alt="" class="visa" />
+            <img src="../assets/payments.png" alt="" class="creditcards"/>
           </div>
         </div>
         <div class="cards">
@@ -46,7 +46,7 @@
             Get 24/7 support with our highly trained agents.
           </p>
           <div class="message">
-            <img src="../assets/message.png" alt="" class="support" />
+            <img src="../assets/bluechat.png" alt="" class="support" />
           </div>
         </div>
         <div class="cards">
@@ -54,6 +54,9 @@
           <p class="content">
             Choose from 7 different currencies to build your crypto portfolio
           </p>
+          <div class="cryptos">
+            <img src="../assets/cryptomethods.png" alt="" class="img" />
+          </div>
         </div>
       </div>
     </div>
@@ -246,15 +249,34 @@ export default {};
   fill: #f3f3f3;
 }
 .support {
-  border-radius: 50%;
-  width: 140px;
+  width: 130px;
   height: fit-content;
-  box-shadow: 0px 0px 2px 1px rgba(22, 22, 22, 0.212);
-  background: rgba(255, 255, 255, 0.534);
+  object-fit: fill;
+  object-position: center;
+  background: #dae9fd;
+  padding: 1.3rem;
+  border-radius: 50%;
+  margin-top: 2rem;
 }
 .message {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.img {
+  height: 10rem;
+}
+.cryptos {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.creditcards{
+  background: #dae9fd;
+  border-radius: 3px;
+  margin-top: .5rem;
+  padding: 1rem;
 }
 </style>
