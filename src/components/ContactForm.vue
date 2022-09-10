@@ -7,8 +7,8 @@
       </div>
       <form action="https://formspree.io/f/mvoygdwl" method="POST">
         <div id="inputgroup">
-          <input type="text" name="name surname" placeholder="John Doe" />
-          <input type="email" name="email" placeholder="example@email.com" />
+          <input type="text" name="name surname" placeholder="John Doe" required/>
+          <input type="email" name="email" placeholder="example@email.com" required />
         </div>
         <textarea
           name="Message"
@@ -16,6 +16,7 @@
           cols="30"
           rows="10"
           placeholder="Message"
+          required
         ></textarea>
         <button type="submit">
           <p>Send Message</p>
