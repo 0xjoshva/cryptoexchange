@@ -165,7 +165,7 @@ img {
 .abv {
   filter: opacity(0.6);
 }
-.tg td {
+td {
   font-family: "Segoe UI";
   font-weight: 500;
   font-size: 14px;
@@ -190,7 +190,7 @@ tr:nth-last-of-type(1):hover {
 tr:hover {
   background-color: #bfd5ff1f;
 }
-.tg th {
+th {
   border-bottom: 1px solid rgba(221, 221, 221, 0.521);
   font-size: 14px;
   font-weight: normal;
@@ -205,7 +205,7 @@ tr:hover {
   padding-right: 6rem;
   padding-left: 2rem;
 }
-.tg th:hover {
+th:hover {
   color: #365fb3;
 }
 .tg .tg-0lax {

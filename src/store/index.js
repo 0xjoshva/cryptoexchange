@@ -69,7 +69,11 @@ export default createStore({
           }
         });
     },
-
+    getUsers: async (context) => {
+      fetch("https://capstone-eomp.herokuapp.com/users")
+        .then((response) => response.json())
+        .then((json) => context.commit("setUsers", json));
+    },
     getCryptos: async (context) => {
       fetch("https://capstone-eomp.herokuapp.com/cryptos")
         .then((response) => response.json())

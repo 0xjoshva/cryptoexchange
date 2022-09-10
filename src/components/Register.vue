@@ -43,7 +43,7 @@
               required
             />
             <p>
-              I agree with Zen’, <span>Terms and Conditions</span> and consent
+              I agree with the Tide's, <span>Terms and Conditions</span> and consent
               to giving away all my data ;P
             </p>
           </div>

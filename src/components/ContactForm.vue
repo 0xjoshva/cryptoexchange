@@ -2,7 +2,7 @@
   <section class="contact">
     <div class="container">
       <div class="text">
-        <h1>Support</h1>
+        <h1>Contact</h1>
         <p id="subheading">Expect a response withing 3-5 business days</p>
       </div>
       <form action="https://formspree.io/f/mvoygdwl" method="POST">
@@ -59,11 +59,12 @@ export default {};
 <style scoped>
 .contact {
   background: var(--bgcolor);
-  height: 100vh;
+  height: fit-content;
   width: 100%;
   font-family: "Satoshi-Variable";
   padding-left: 9rem;
   padding-right: 10rem;
+  margin-bottom: 6rem;
 }
 .container {
   height:fit-content;
@@ -71,7 +72,7 @@ export default {};
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 .text {
   width: 100%;

@@ -10,7 +10,7 @@
         Its as simple as point and click. <br />
       </p>
       <p>
-        <span id="highlight">Emma</span> and
+        <span id="highlight">Joshua</span> and
         <span id="highlight">16 others</span> have <br />
         already joined us...
       </p>
