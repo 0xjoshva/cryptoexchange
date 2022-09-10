@@ -24,7 +24,6 @@
       <router-link to="/register" class="join">Get Started</router-link>
     </div>
     <img src="../assets/bitcoin.png" alt="" id="hero" />
-    
   </section>
 </template>
 <script>
@@ -82,7 +81,7 @@ export default {};
   margin-top: 1.5rem;
   text-decoration: none;
   font-size: 22px;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .users {
@@ -116,5 +115,8 @@ export default {};
   font-size: 22px;
   color: white;
   filter: opacity(0.7);
+}
+.join:focus {
+  scale: 0.8;
 }
 </style>

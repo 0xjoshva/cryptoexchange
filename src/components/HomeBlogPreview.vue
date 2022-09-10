@@ -57,6 +57,9 @@
         </div>
       </router-link>
     </div>
+    <div class="wrapper2">
+      <router-link to="/blog" class="viewall">View all blogs</router-link>
+    </div>
   </section>
 </template>
 <script>
@@ -156,5 +159,22 @@ a {
   font-family: "Segoe UI";
   font-weight: 600;
   color: rgb(0, 0, 0);
+}
+.viewall {
+  border-radius: 5px;
+  border: 2px solid white;
+  padding: 0.2rem 1rem;
+  color: white;
+  font-family: "Satoshi-Variable";
+  margin-top: 2rem;
+}
+.viewall:focus{
+ scale: 0.9;
+}
+.wrapper2{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

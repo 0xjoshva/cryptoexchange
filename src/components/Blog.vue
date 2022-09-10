@@ -46,6 +46,7 @@
         <router-link :to="{ name: 'BlogSingleView', params: { id: blog.id } }">
           <img v-bind:src="blog.image" alt="" />
           <div class="text">
+            <div class="category">{{ blog.category.toUpperCase() }}</div>
             <h6 class="aheader">{{ blog.title }}</h6>
             <p class="ablurb">
               {{ blog.blurb }}
@@ -77,7 +78,6 @@
       </svg>
     </div>
   </section>
-
 </template>
 <script>
 export default {
@@ -215,7 +215,6 @@ export default {
   font-weight: 800;
   color: rgb(0, 0, 0);
   font-size: 2rem;
-  padding-top: 1rem;
 }
 .ablurb {
   font-family: "Segoe UI";
@@ -223,7 +222,6 @@ export default {
   font-weight: 500;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.699);
-  padding-bottom: 1.5rem;
   color: rgb(43, 43, 43);
   padding-top: 1rem;
 }
@@ -247,7 +245,6 @@ export default {
   font-style: normal;
   font-weight: 500;
 }
-
 
 /* Spinner */
 .spinner {
@@ -285,8 +282,13 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-a{
+a {
   text-decoration: none;
   display: flex;
+}
+.category {
+  font-weight: bold;
+  font-family: "Satoshi-Variable";
+  padding-top: 1rem;
 }
 </style>

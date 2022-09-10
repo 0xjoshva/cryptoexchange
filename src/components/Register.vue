@@ -123,6 +123,13 @@ button p {
   font-size: 1rem;
   padding-right: 1rem;
   font-weight: 600;
+  
+}
+.btn{
+  color: white;
+  font-family: 'Satoshi-Variable';
+  font-weight:500;
+  padding: .5rem 1.5rem !important;
 }
 input {
   width: 632px;
@@ -137,6 +144,7 @@ input {
   line-height: 96.51%;
   padding-left: 0.6rem;
   color: white;
+  transition: .4s all ease-in-out;
 }
 input:focus {
   border: 1px solid var(--highlight);

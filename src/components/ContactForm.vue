@@ -62,14 +62,16 @@ export default {};
   height: 100vh;
   width: 100%;
   font-family: "Satoshi-Variable";
+  padding-left: 9rem;
+  padding-right: 10rem;
 }
 .container {
-  height: 100vh;
+  height:fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
+  width: 100%;
+  margin: 0;
+  padding-top: 4rem;
 }
 .text {
   width: 100%;
