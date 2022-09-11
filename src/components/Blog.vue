@@ -42,8 +42,14 @@
         </svg>
       </h1>
 
-      <div v-for="blog in blogs" :key="blog.id" blog="blog" class="article">
-        <router-link :to="{ name: 'BlogSingleView', params: { id: blog.id } }">
+      <div class="article">
+        <router-link
+          :to="{ name: 'BlogSingleView', params: { id: blog.id } }"
+          class="item"
+          v-for="blog in blogs"
+          :key="blog.id"
+          blog="blog"
+        >
           <img v-bind:src="blog.image" alt="" />
           <div class="text">
             <div class="category">{{ blog.category.toUpperCase() }}</div>
@@ -96,11 +102,11 @@ export default {
 <style scoped>
 #blog {
   width: 100%;
-  height: fit-content;
   background: var(--bgcolor);
   color: white;
   padding-top: 7rem;
   padding-bottom: 12rem;
+  height: 430vh;
 }
 .container {
   background: url(../assets/markzuck.jpg);
@@ -114,10 +120,10 @@ export default {
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
   box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.09);
 }
 .info {
@@ -169,13 +175,19 @@ export default {
   height: 21rem;
   max-height: fit-content;
   width: 69vw;
-  transition: 0.3s all ease-in-out;
   margin-bottom: 3rem;
   color: black;
+
+  flex-direction: column;
+  row-gap: 2rem;
 }
-.article:hover {
+.item:hover {
   transform: translateX(3rem);
   cursor: pointer;
+}
+.item {
+  transition: .7s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  min-height: 21rem;
 }
 
 .article img {
@@ -281,6 +293,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: fit-content !important;
 }
 a {
   text-decoration: none;
@@ -290,5 +303,46 @@ a {
   font-weight: bold;
   font-family: "Satoshi-Variable";
   padding-top: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .container {
+    width: 91vw;
+    margin-left: 0rem;
+  }
+  .bigcontainer {
+    padding-left: 2rem;
+  }
+  .ablurb {
+  }
+  .aauthor {
+  }
+  .article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    row-gap: 0rem;
+    width: fit-content;
+  }
+  .item img {
+    border-radius: 0;
+  }
+  .text {
+    border-radius: 0;
+    height: fit-content;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }
 </style>

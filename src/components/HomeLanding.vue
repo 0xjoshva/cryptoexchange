@@ -119,4 +119,30 @@ export default {};
 .join:focus {
   scale: 0.8;
 }
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  section{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 20rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  
+  }
+  .text{
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+  }
+  img{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+}
 </style>

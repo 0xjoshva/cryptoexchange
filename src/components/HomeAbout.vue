@@ -37,7 +37,7 @@
             Express
           </p>
           <div class="debitcredit">
-            <img src="../assets/payments.png" alt="" class="creditcards"/>
+            <img src="../assets/payments.png" alt="" class="creditcards" />
           </div>
         </div>
         <div class="cards">
@@ -273,10 +273,36 @@ export default {};
   align-items: center;
   justify-content: center;
 }
-.creditcards{
+.creditcards {
   background: #dae9fd;
   border-radius: 3px;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .title{
+    font-size: 2.3rem;
+  }
+  .subheading{
+    width: 80%;
+  }
+  .container{
+    column-gap: 1rem;
+  }
+  img{
+    display: none;
+  }
+  .cards{
+    height: 15rem;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }
 </style>

@@ -60,11 +60,11 @@ section {
   box-shadow: -10px 10px 19px 10px #00000047;
 }
 .header {
-    font-family: "Satoshi-Variable";
-    font-weight: 700;
-    font-size: 3rem;
-    color: black;
-  }
+  font-family: "Satoshi-Variable";
+  font-weight: 700;
+  font-size: 3rem;
+  color: black;
+}
 .text p {
   padding-bottom: 0.5rem;
   color: rgba(81, 81, 81, 0.833);
@@ -72,5 +72,25 @@ section {
   font-weight: 500;
   font-size: 18px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  section {
+    flex-direction: column-reverse;
+  }
+  .text {
+    margin-left: 2rem;
+  }
+  .phone {
+    width: 100vw;
+    padding-top: 5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }
 </style>

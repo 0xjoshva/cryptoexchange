@@ -12,7 +12,7 @@
         while expanding to our full potential.
       </p>
     </div>
-      <img src="../assets/dash.png" alt="" />
+    <img src="../assets/dash.png" alt="" />
   </section>
 </template>
 <script>
@@ -54,5 +54,33 @@ section {
 }
 img {
   width: 50vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  section{
+    flex-direction: column;
+  }
+  .text{
+    padding: 0;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    margin: 2rem;
+    padding-bottom: 2rem;
+    height: 25rem;
+    border-radius: 10px;
+    width: 100%;
+    padding-right: 3rem;
+  }
+  img{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }
 </style>

@@ -163,18 +163,40 @@ a {
 .viewall {
   border-radius: 5px;
   border: 2px solid white;
-  padding: 0.2rem 1rem;
+  padding: 0.6rem 2rem;
   color: white;
   font-family: "Satoshi-Variable";
   margin-top: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
-.viewall:focus{
- scale: 0.9;
+.viewall:focus {
+  scale: 0.9;
+  color: black;
+  background: white;
 }
-.wrapper2{
+.wrapper2 {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .subheading{
+    text-align: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }
 </style>

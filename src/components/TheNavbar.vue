@@ -95,7 +95,7 @@ export default {
     return {
       email: "",
       password: "",
-      user_type:""
+      user_type: "",
     };
   },
   methods: {
@@ -112,9 +112,9 @@ export default {
     },
     ChangeUserType() {
       if (this.user.user_type !== null) {
-        this.user_type = this.user.user_type  
+        this.user_type = this.user.user_type;
       }
-    }
+    },
   },
   mounted() {
     function activeLinks() {
@@ -123,10 +123,8 @@ export default {
       function changeClass() {
         navLinks.classList.add("active");
       }
-    };
+    }
     this.ChangeUserType();
-
-
   },
 };
 </script>
@@ -245,18 +243,6 @@ form {
   z-index: 0 !important;
 }
 
-@media only screen and (max-width: 1200px) {
-  /*Tablets [601px -> 1200px]*/
-  .home p {
-    display: none;
-  }
-  .home {
-    padding-left: 3rem;
-  }
-  .nav-links {
-    padding-right: 3rem;
-  }
-}
 .login-signup {
   display: flex;
 }
@@ -268,5 +254,30 @@ form {
 }
 #accountdiv {
   display: flex;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  nav{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    column-gap: 10rem;
+  }
+  .home{
+padding-left: 2rem;
+  }
+  .home p{
+    display: none;
+  }
+  .nav-links{
+    padding-right:0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }
 </style>
