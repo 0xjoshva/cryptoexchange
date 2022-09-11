@@ -116,6 +116,11 @@ export default createStore({
         .then((response) => response.json())
         .then((data) => console.log(data));
     },
+    deleteUser: async (context, id) => {
+      fetch("https://capstone-eomp.herokuapp.com/users/" + id, {
+        method: "DELETE",
+      }).then(() => context.commit("setUsers"));
+    },
   },
   modules: {},
   plugins: [createPersistedState()],

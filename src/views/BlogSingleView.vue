@@ -1,9 +1,14 @@
 <template>
   <section>
     <div v-if="blogs" class="item">
-      <img v-bind:src="blogs.image" alt="">
-      <p>{{ blogs.title }}</p>
-      <p>{{ blogs.article }}</p>
+      <div class="wrapper">
+        <img v-bind:src="blogs.image" alt="" class="image" />
+        <p class="category">{{ blogs.category.toUpperCase() }}</p>
+        <p class="title">{{ blogs.title }}</p>
+      </div>
+      <div class="text">
+        <p>{{ blogs.article }}</p>
+      </div>
     </div>
     <div v-else class="spinnerboxx">
       <svg
@@ -70,7 +75,48 @@ export default {
   height: 100vh;
   align-items: center;
 }
-img{
+section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: var(--bgcolor);
+  width: 100%;
+  justify-content: center;
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+.item {
+  width: 98%;
+  background: white;
+  display: flex;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: .5rem;
+  padding-bottom: 2rem;
 
+  height: 40rem;
+
+  border-radius: 10px;
+  column-gap: 4rem;
+}
+img {
+  height: 30rem;
+  width: 40rem;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: left;
+}
+.wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.text {
+  width: fit-content;
+  overflow-y: scroll;
+  padding-right: 2rem;
+}
+::-webkit-scrollbar-thumb{
+  color: blue;
+  background-color: #1852c5;
 }
 </style>

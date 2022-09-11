@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section v-if="user.user_type === 'admin'">
     <div class="container">
       <div class="blog-panel item"></div>
       <div class="transaction-panel item"></div>
@@ -15,6 +15,7 @@
             <th class="tg-0lax">User Type</th>
             <th class="tg-0lax">Phone Number</th>
             <th class="tg-0lax">Balance</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -25,19 +26,50 @@
             <td>{{ user.user_type }}</td>
             <td>{{ user.phone_number }}</td>
             <td>R {{ user.balance }}</td>
+            <td>
+              <button type="button" @click="deleteUser()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-trash-x"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#ff4500"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 7h16" />
+                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                  <path d="M10 12l4 4m0 -4l-4 4" />
+                </svg>
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
+  <section v-else>not authed</section>
 </template>
 <script>
 export default {
+  props: ["id"],
   mounted() {
-    this.$store.dispatch("getUsers");
+    this.$store.dispatch("getUsers", this.$route.params.id);
   },
-  methods: {},
+  methods: {
+    deleteUser(id) {
+      return this.$store.dispatch("deleteUser", id);
+    },
+  },
   computed: {
+    user() {
+      return this.$store.state.user;
+    },
     users() {
       return this.$store.state.users;
     },
@@ -74,7 +106,7 @@ section {
   box-shadow: 0px 0px 10px 0px #5f5f5f75;
 }
 .user-panel {
-  width: 60rem;
+  width: 65rem;
   height: 43rem;
   border: 5px solid white;
   border-radius: 10px;
@@ -118,17 +150,24 @@ th {
   font-weight: 500;
   font-size: 0.8rem;
   transition: 0.1s all ease-in-out;
-  padding-right: 6rem;
+  padding-right: 2rem;
   padding-left: 2rem;
+  width: 100%;
+  white-space: nowrap;
 }
 th:hover {
   color: #365fb3;
 }
-table{
+table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-tr{
+tr {
   width: 60rem;
+}
+button {
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 </style>

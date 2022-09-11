@@ -42,6 +42,7 @@ const routes = [
     path: "/admin",
     name: "admin",
     component: () => import("../views/AdminPanelView.vue"),
+    props: true,
   },
   {
     path: "/register",
