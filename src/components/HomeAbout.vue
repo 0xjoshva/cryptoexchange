@@ -24,39 +24,30 @@
       </svg>
     </div>
     <div class="text">
-      <h3 class="title">Build your digital asset portfolio with ease</h3>
+      <h3 class="title">Tide is a crypto exchange for everyone</h3>
       <p class="subheading">
         Choose from a growing list of 7 different cryptocurrencies, and pay with
         your bank card
       </p>
       <div class="container">
         <div class="cards">
-          <h1 class="header">Debit / Credit cards</h1>
+          <h1 class="header">50+</h1>
           <p class="content">
-            Buy cryptocurrency easily with Mastercard, Visa, and American
-            Express
+            Countries
           </p>
-          <div class="debitcredit">
-            <img src="../assets/payments.png" alt="" class="creditcards" />
-          </div>
+      
         </div>
         <div class="cards">
-          <h1 class="header">Support</h1>
+          <h1 class="header">24/7</h1>
           <p class="content">
-            Get 24/7 support with our highly trained agents.
+            Customer support
           </p>
-          <div class="message">
-            <img src="../assets/bluechat.png" alt="" class="support" />
-          </div>
         </div>
         <div class="cards">
-          <h1 class="header">Cryptocurrency</h1>
+          <h1 class="header">4K+</h1>
           <p class="content">
-            Choose from 7 different currencies to build your crypto portfolio
+            Users
           </p>
-          <div class="cryptos">
-            <img src="../assets/cryptomethods.png" alt="" class="img" />
-          </div>
         </div>
       </div>
     </div>
@@ -142,20 +133,19 @@ export default {};
 .container {
   width: fit-content;
   display: flex;
-  column-gap: 7rem;
+  column-gap: 20rem;
   padding-top: 4rem;
 }
 .cards {
-  background: rgb(255, 255, 255);
   border-radius: 10px;
-  width: 25rem;
-  height: 20rem;
+  width: fit-content;
+  height: fit-content;
   transition: 0.4s all ease-in-out;
   padding: 1rem;
-}
-.cards:hover {
-  box-shadow: 5px 5px 0px 0px var(--bgcolor);
-  transform: translate(-3px, -3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .text {
   width: 100%;
@@ -182,7 +172,7 @@ export default {};
   font-weight: 700;
   font-size: 3rem;
   line-height: 60px;
-  color: black;
+  color: var(--bgcolor);
   white-space: nowrap;
   text-align: center;
   white-space: nowrap;
@@ -200,8 +190,8 @@ export default {};
 .header {
   font-family: "Satoshi-Variable";
   font-weight: 700;
-  font-size: 1.5rem;
-  color: rgb(0, 0, 0);
+  font-size: 3.5rem;
+  color: var(--bgcolor);
   padding-bottom: 0.3rem;
 }
 .debitcredit {

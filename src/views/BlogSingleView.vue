@@ -3,11 +3,11 @@
     <div v-if="blogs" class="item">
       <div class="wrapper">
         <img v-bind:src="blogs.image" alt="" class="image" />
-        <p class="category">{{ blogs.category.toUpperCase() }}</p>
         <p class="title">{{ blogs.title }}</p>
+        <p class="category">{{ blogs.category.toUpperCase() }}</p>
       </div>
       <div class="text">
-        <p>{{ blogs.article }}</p>
+        <p class="content">{{ blogs.article }}</p>
       </div>
     </div>
     <div v-else class="spinnerboxx">
@@ -91,7 +91,7 @@ section {
   display: flex;
   padding-left: 2rem;
   padding-top: 2rem;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
   padding-bottom: 2rem;
 
   height: 40rem;
@@ -105,18 +105,47 @@ img {
   border-radius: 5px;
   object-fit: cover;
   object-position: left;
+  display: flex;
+  justify-self: flex-end;
+  align-self: flex-start;
 }
 .wrapper {
-  width: fit-content;
-  height: fit-content;
+  width: 70vw;
+  height: 35.6rem;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .text {
   width: fit-content;
   overflow-y: scroll;
   padding-right: 2rem;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   color: blue;
   background-color: #1852c5;
+}
+.title {
+  font-family: "Satoshi-Variable";
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  padding-bottom: 3rem;
+  
+}
+.category {
+  color: #1f86fc;
+  font-family: "Satoshi-Variable";
+  font-weight: 800;
+  font-size: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.content {
+  font-family: "Satoshi-Variable";
+  color: black;
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: 400;
 }
 </style>

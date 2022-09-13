@@ -92,14 +92,19 @@ img {
 
 .modal-backdrop {
   z-index: 0;
+  opacity: 0.5 !important;
 }
 
+.pageContent {
+}
 .modal-content {
-  width: 25rem;
-  height: 30rem;
+  width: 20rem;
+  height: fit-content;
   border-radius: 0;
-  border-radius:4px;
-  border-bottom-right-radius: 100px;
+  border-radius: 4px;
+  padding-bottom: 1rem;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
 }
 .modal-header {
   border-bottom: none;
@@ -111,5 +116,14 @@ img {
 .btn-primary {
   border-radius: 0;
   padding: 0.5rem 1.6rem;
+}
+.modal-dialog {
+  height: 100vh !important;
+  display: flex;
+}
+
+.modal-content {
+  margin: auto !important;
+  height: fit-content !important;
 }
 </style>

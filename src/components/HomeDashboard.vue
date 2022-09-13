@@ -12,7 +12,7 @@
         while expanding to our full potential.
       </p>
     </div>
-    <img src="../assets/dash.png" alt="" />
+    <img src="../assets/Crypto-Dashboard.png" alt="" />
   </section>
 </template>
 <script>
@@ -53,7 +53,15 @@ section {
   padding-right: 10rem;
 }
 img {
-  width: 50vw;
+  width: 40vw;
+  height: auto;
+  object-fit: cover;
+  object-position: left;
+  margin-right: 3rem;
+  border-radius: 3px;
+  top: -4rem;
+  position: relative;
+  opacity: .9;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -72,9 +80,6 @@ img {
     border-radius: 10px;
     width: 100%;
     padding-right: 3rem;
-  }
-  img{
-    width: 100%;
   }
 }
 @media only screen and (max-width: 600px) {

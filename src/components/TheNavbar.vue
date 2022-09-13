@@ -23,14 +23,13 @@
         >
       </div>
       <div v-else class="login-signup">
-        <router-link to="/register" class="nav-link">Sign Up</router-link>
         <button
           id="login"
           class=""
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
-          Login
+          Sign In
         </button>
         <div
           class="modal fade"
@@ -41,44 +40,36 @@
         >
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
+              <img src="../assets/logo2.png" alt="" class="logo2" />
               <div class="modal-body">
-                Sign in
-                <label for="email"
-                  >Email <br /><input
-                    name="email"
-                    type="email"
-                    v-model="email"
-                    required
-                /></label>
-                <label for="password"
-                  >Password <br /><input
-                    name="password"
-                    type="password"
-                    v-model="password"
-                    required
-                /></label>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  @click.prevent="Login()"
-                  data-bs-dismiss="modal"
-                >
-                  Sign in
-                </button>
+                <form action="">
+                  <label for=""
+                    >Email <br />
+                    <input name="email" type="email" v-model="email" required
+                  /></label>
+                  <label for=""
+                    >Password <br /><input
+                      name="password"
+                      type="password"
+                      v-model="password"
+                      required
+                  /></label>
+                  <button
+                    type="button"
+                    class="btn loginbtn"
+                    @click.prevent="Login()"
+                    data-bs-dismiss="modal"
+                  >
+                    Login
+                  </button>
+                </form>
               </div>
             </div>
           </div>
         </div>
+        <router-link to="/register" class="nav-link createacc"
+          >Create Account</router-link
+        >
       </div>
     </div>
   </nav>
@@ -141,6 +132,12 @@ nav {
   top: 0;
   z-index: 100;
 }
+.createacc {
+  background: white;
+  border-radius: 26px;
+  color: var(--bgcolor) !important;
+  margin-left: 1rem;
+}
 #login {
   border: none;
   outline: none;
@@ -148,12 +145,15 @@ nav {
   width: fit-content;
   background: transparent;
   padding: 0.4rem 1.2rem;
-  border: 2px solid var(--highlight);
+
   font-size: 16px;
   font-family: "Satoshi-Variable";
   color: white;
   border-radius: 26px;
   font-weight: 500;
+  border: 2px white solid;
+  border-radius: 26px;
+  padding: 0.4rem 1rem;
 }
 
 .nav-link {
@@ -258,20 +258,20 @@ form {
 
 @media only screen and (max-width: 1200px) {
   /*Tablets [601px -> 1200px]*/
-  nav{
+  nav {
     display: flex;
     justify-content: flex-start;
     width: 100%;
     column-gap: 10rem;
   }
-  .home{
-padding-left: 2rem;
+  .home {
+    padding-left: 2rem;
   }
-  .home p{
+  .home p {
     display: none;
   }
-  .nav-links{
-    padding-right:0;
+  .nav-links {
+    padding-right: 0;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -279,5 +279,59 @@ padding-left: 2rem;
 }
 @media only screen and (max-width: 425px) {
   /*Small smartphones [325px -> 425px]*/
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  background: none;
+  border: 1px solid rgba(12, 170, 246, 0.5);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: black;
+  transition: 0.3s;
+  width: 15rem;
+  z-index: 1;
+}
+.loginbtn {
+  background: var(--highlight);
+  font-family: "Satoshi-Variable";
+  color: white;
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 0.5rem 3rem;
+}
+h3 {
+  font-family: "Satoshi-Variable";
+  font-weight: 600;
+}
+.line {
+  height: 5px;
+  background: #fd0000;
+}
+
+.or {
+  position: relative;
+  top: 36px;
+  background: #fff;
+  display: inline-block;
+  padding: 0 20px;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+}
+.logo2 {
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+label {
+  font-family: "Satoshi-Variable";
+  color: black;
+  font-size: .8rem;
+  font-weight: 500;
 }
 </style>
