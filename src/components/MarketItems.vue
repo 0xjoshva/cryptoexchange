@@ -67,10 +67,12 @@
                 </div>
               </td>
               <td>R {{ crypto.price }}</td>
-              <td>+0.5%</td>
-              <td>123123</td>
-              <td>123123</td>
-              <td>12321313</td>
+              <td class="daychange">{{ crypto.daychange }}%</td>
+              <td>R {{ crypto.dayvolume }}</td>
+              <td>R {{ crypto.marketcap }}</td>
+              <td>
+           gi
+              </td>
               <td>
                 <router-link
                   id="buybtn"
@@ -110,6 +112,7 @@
 
 <script>
 export default {
+  
   props: ["crypto_id", "crypto"],
   mounted() {
     this.$store.dispatch("getCryptos");
@@ -188,7 +191,7 @@ tr:nth-last-of-type(1):hover {
   border-radius: 20px;
 }
 tr:hover {
-  background-color: #bfd5ff1f;
+  background-color: #bfd5ff52;
 }
 th {
   border-bottom: 1px solid rgba(221, 221, 221, 0.521);
@@ -289,5 +292,8 @@ th:hover {
   justify-content: center;
   align-items: center;
   padding-top: 5rem;
+}
+.daychange{
+  color: red;
 }
 </style>
